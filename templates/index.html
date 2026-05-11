@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="scratch-container">
+    <h1 class="page-title">Was machen wir heute?</h1>
+    <p class="subtitle">Wähle eine der drei Geheimboxen für unser nächstes Abenteuer!</p>
+
+    <div class="options-container">
+        <label class="custom-checkbox">
+            <input type="checkbox" id="hailey-lars-alone">
+            <span class="checkmark"></span>
+            <span class="label-text">Hailey und Lars alleine <br><small>(ohne Amy)</small></span>
+        </label>
+    </div>
+
+    <!-- The 3 Mystery Boxes -->
+    <div class="boxes-wrapper" id="boxes-wrapper">
+        <div class="mystery-box" data-box="1">
+            <i class="fa-solid fa-box-open box-icon"></i>
+            <span>Box 1</span>
+        </div>
+        <div class="mystery-box" data-box="2">
+            <i class="fa-solid fa-box-open box-icon"></i>
+            <span>Box 2</span>
+        </div>
+        <div class="mystery-box" data-box="3">
+            <i class="fa-solid fa-box-open box-icon"></i>
+            <span>Box 3</span>
+        </div>
+    </div>
+
+    <!-- The Revealed Content (Hidden initially) -->
+    <div class="revealed-content" id="revealed-content" style="display: none;">
+        <div class="prize-badge"><i class="fa-solid fa-trophy"></i> GEWINN!</div>
+        <h2 id="activity-title">Lade...</h2>
+        <p id="activity-description">Einen Moment bitte...</p>
+        <div class="date-picker-container" id="date-picker-container"
+            style="display: none; margin-bottom: 15px; width: 100%;">
+            <label for="event-datetime"
+                style="font-weight: bold; display: block; margin-bottom: 5px; color: var(--primary-color);">Wann machen
+                wir das?</label>
+            <input type="datetime-local" id="event-datetime"
+                style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; font-family: 'Outfit', sans-serif; font-size: 1rem;">
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn btn-primary" id="btn-maps" style="display: none;">
+                <i class="fa-solid fa-bus"></i> Wie kommen wir dorthin?
+            </button>
+            <button class="btn btn-success" id="btn-calendar" style="display: none;">
+                <i class="fa-solid fa-calendar-check"></i> Im Kalender speichern
+            </button>
+        </div>
+
+        <div id="calendar-status" class="status-msg"></div>
+
+        <div id="directions-container" class="directions-card" style="display: none;">
+            <h3><i class="fa-solid fa-map-location-dot"></i> Wegbeschreibung</h3>
+            <div id="directions-panel"></div>
+        </div>
+    </div>
+
+    <button class="btn btn-secondary mt-20" id="btn-reset" style="display: none;">
+        <i class="fa-solid fa-rotate-right"></i> Neue Boxen wählen
+    </button>
+</div>
+
+{% if show_mothers_day %}
+<div id="mothers-day-modal" class="modal"
+    style="display: flex; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center;">
+    <div class="modal-content"
+        style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); margin: auto; padding: 40px; border: 1px solid #888; width: 90%; max-width: 500px; border-radius: 20px; text-align: center; box-shadow: 0 15px 30px rgba(0,0,0,0.5); position: relative; animation: slideUpFade 0.8s;">
+        <span onclick="document.getElementById('mothers-day-modal').style.display='none'"
+            style="color: #fff; position: absolute; top: -15px; right: -15px; font-size: 28px; font-weight: bold; cursor: pointer; background: #333; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">&times;</span>
+        <h2 style="font-family: 'Chewy', cursive; color: #d63031; font-size: 2.5rem; margin-bottom: 20px;"><i
+                class="fa-solid fa-heart"></i> Alles Liebe zum Muttertag!</h2>
+        <p style="font-size: 1.2rem; color: #2d3436; line-height: 1.6; font-family: 'Outfit', sans-serif;">
+            Herzlichen Glückwunsch zum Muttertag. Jetzt bist du seit fast 6 jahren Mutter und du meisterst das einfach
+            mega. Deine Nerven liegen oft blank und trotzdem liebst du jeden, du bist eine Wunderschöne Frau die weder
+            ich noch Hailey mehr missen wollen. Bleib so wie du bist. Du bist die aller beste Mama und Freundin der
+            Welt. Wir lieben dich über alles.
+        </p>
+        <p
+            style="font-size: 1.3rem; font-weight: bold; color: #d63031; margin-top: 25px; font-family: 'Chewy', cursive;">
+            In Liebe,<br>Hailey und Lars
+        </p>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if maps_api_key and maps_api_key != 'FÜGE_HIER_DEINEN_MAPS_API_KEY_EIN' %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ maps_api_key }}&libraries=places"></script>
+{% endif %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

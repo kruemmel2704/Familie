@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="admin-container">
+    <h1><i class="fa-solid fa-gear"></i> Admin-Bereich</h1>
+    <p>Verwalte hier die Verbindung zum Google Kalender, damit eure Abenteuer direkt eingetragen werden können.</p>
+
+    <div class="card">
+        <h2>1. Google Kalender verbinden</h2>
+        {% if client_secret_exists %}
+            <p>Die <code>client_secret.json</code> wurde gefunden. Du kannst dich nun mit Google verbinden.</p>
+            <a href="{{ url_for('authorize') }}" class="btn btn-primary">
+                <i class="fa-brands fa-google"></i> Google Kalender verbinden
+            </a>
+        {% else %}
+            <div class="alert alert-warning">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <strong>Wichtig:</strong> Die Datei <code>client_secret.json</code> fehlt im Hauptverzeichnis.
+                <br><br>
+                Um den Google Kalender nutzen zu können, musst du:
+                <ol>
+                    <li>In der <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a> ein Projekt erstellen.</li>
+                    <li>Die "Google Calendar API" aktivieren.</li>
+                    <li>Unter "APIs & Dienste" > "Anmeldedaten" eine OAuth-Client-ID (Webanwendung) erstellen.</li>
+                    <li>Als autorisierte Weiterleitungs-URI <code>http://localhost:5000/oauth2callback</code> eintragen.</li>
+                    <li>Die JSON-Datei herunterladen und als <code>client_secret.json</code> im Projektordner speichern.</li>
+                </ol>
+            </div>
+        {% endif %}
+    </div>
+
+    {% if calendars %}
+    <div class="card mt-20">
+        <h2>2. Kalender auswählen</h2>
+        <p>Wähle den Kalender aus, in dem die Aktivitäten gespeichert werden sollen.</p>
+        
+        <form action="{{ url_for('save_calendar') }}" method="POST" class="calendar-form">
+            <select name="calendar_id" class="calendar-select">
+                <option value="">-- Bitte Kalender wählen --</option>
+                {% for cal in calendars %}
+                    <option value="{{ cal.id }}" {% if config.calendar_id == cal.id %}selected{% endif %}>
+                        {{ cal.summary }}
+                    </option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-success mt-10">
+                <i class="fa-solid fa-floppy-disk"></i> Speichern
+            </button>
+        </form>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

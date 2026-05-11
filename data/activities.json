@@ -1,0 +1,1255 @@
+[
+  {
+    "id": 1,
+    "title": "Abenteuer im Volkspark Mainz",
+    "description": "Ein riesiger Park mit einem tollen Wasserspielplatz, einer Minibahn und viel Platz zum Toben. Perfekt für einen sonnigen Tag!",
+    "destination": "Volkspark, Mainz",
+    "destination_query": "Volkspark Mainz"
+  },
+  {
+    "id": 2,
+    "title": "Tiere füttern im Wildpark Gonsenheim",
+    "description": "Wir besuchen die Wildschweine, Hirsche und Ziegen im Wald. Bringt ein bisschen Kleingeld für das Tierfutter mit!",
+    "destination": "Wildpark Mainz-Gonsenheim",
+    "destination_query": "Wildpark Mainz-Gonsenheim"
+  },
+  {
+    "id": 3,
+    "title": "Dinosaurier im Naturhistorischen Museum",
+    "description": "Wir tauchen ein in die spannende Welt der Dinosaurier und der heimischen Tierwelt. Ein tolles Erlebnis, auch wenn es regnet!",
+    "destination": "Naturhistorisches Museum, Mainz",
+    "destination_query": "Naturhistorisches Museum Mainz"
+  },
+  {
+    "id": 4,
+    "title": "Spielplatz-Entdeckungstour",
+    "description": "Wir suchen uns heute einen ganz neuen Spielplatz in der Umgebung aus oder besuchen euren absoluten Lieblingsspielplatz!",
+    "destination": "Spielplatz",
+    "destination_query": "Spielplatz"
+  },
+  {
+    "id": 5,
+    "title": "Hüpfen und Klettern im Tobolino",
+    "description": "Im großen Indoor-Spielplatz gibt es Rutschen, Klettergerüste und jede Menge Action!",
+    "destination": "Tobolino, Mainz",
+    "destination_query": "Tobolino Mainz"
+  },
+  {
+    "id": 6,
+    "title": "Picknick am Rheinufer",
+    "description": "Wir packen eine gemütliche Decke und leckere Snacks ein und beobachten die großen Schiffe auf dem Rhein.",
+    "destination": "Rheinufer, Mainz",
+    "destination_query": "Rheinufer Mainz"
+  },
+  {
+    "id": 7,
+    "title": "Ausflug in die Fasanerie Wiesbaden",
+    "description": "Ein wunderschöner Naturpark mit vielen Tieren und tollen Spielmöglichkeiten. Ein toller Ausflug mit Bus und Bahn!",
+    "destination": "Fasanerie, Wiesbaden",
+    "destination_query": "Tier- und Pflanzenpark Fasanerie"
+  },
+  {
+    "id": 8,
+    "title": "Eis essen in der Altstadt",
+    "description": "Wir fahren in die Mainzer Altstadt und gönnen uns ein riesiges, leckeres Eis bei der besten Eisdiele!",
+    "destination": "Mainz Altstadt",
+    "destination_query": "Mainz Altstadt"
+  },
+  {
+    "id": 9,
+    "title": "Dinosaurier in Frankfurt",
+    "description": "Wir fahren mit dem Zug ins Senckenberg Naturmuseum nach Frankfurt und schauen uns riesige Dinosaurier-Skelette an!",
+    "destination": "Senckenberg Naturmuseum, Frankfurt am Main",
+    "destination_query": "Senckenberg Naturmuseum Frankfurt"
+  },
+  {
+    "id": 10,
+    "title": "Freizeitpark Lochmühle",
+    "description": "Ein toller Tag mit Traktorfahren, Tieren und Achterbahnen. Perfekt mit der Regionalbahn erreichbar!",
+    "destination": "Freizeitpark Lochmühle, Wehrheim",
+    "destination_query": "Freizeitpark Lochmühle"
+  },
+  {
+    "id": 11,
+    "title": "Flugzeuge gucken am Airport",
+    "description": "Wir fahren mit der S-Bahn direkt an den Frankfurter Flughafen und beobachten auf der Besucherterrasse die riesigen Flugzeuge beim Starten und Landen.",
+    "destination": "Besucherterrasse Flughafen Frankfurt",
+    "destination_query": "Besucherterrasse Flughafen Frankfurt"
+  },
+  {
+    "id": 12,
+    "title": "Tiere im Opel-Zoo",
+    "description": "Mit der Bahn geht es in den Taunus. Im Opel-Zoo gibt es sogar Elefanten und Giraffen zu bestaunen!",
+    "destination": "Opel-Zoo, Kronberg im Taunus",
+    "destination_query": "Opel-Zoo Kronberg"
+  },
+  {
+    "id": 13,
+    "title": "Abenteuer im Luisenpark",
+    "description": "Wir fahren mit dem RE nach Mannheim. Dort gibt es im Luisenpark Gondolettas (kleine Boote), Pinguine und riesige Spielplätze!",
+    "destination": "Luisenpark, Mannheim",
+    "destination_query": "Luisenpark Mannheim"
+  },
+  {
+    "id": 14,
+    "title": "Mitmach-Museum in Frankfurt",
+    "description": "Wir besuchen das 'Junge Museum' in Frankfurt. Hier darf man alles anfassen, ausprobieren und selbst mitmachen!",
+    "destination": "Junges Museum, Frankfurt am Main",
+    "destination_query": "Junges Museum Frankfurt"
+  },
+  {
+    "id": 15,
+    "title": "Darmstädter Vivarium",
+    "description": "Ein kleiner, aber feiner Tierpark in Darmstadt. Wir schauen uns die bunten Fische, Schildkröten und Affen an.",
+    "destination": "Zoo Vivarium, Darmstadt",
+    "destination_query": "Zoo Vivarium Darmstadt"
+  },
+  {
+    "id": 16,
+    "title": "Höhle bauen",
+    "description": "Heute bleiben wir zu Hause! Wir schnappen uns alle Decken und Kissen und bauen die größte Höhle im Wohnzimmer.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 17,
+    "title": "Indoor Picknick",
+    "description": "Das Wetter ist egal: Wir machen ein gemütliches Picknick auf dem Wohnzimmerboden mit leckeren Snacks.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 18,
+    "title": "Familien-Kino",
+    "description": "Popcorn machen, Vorhänge zu und ab auf die Couch! Wir schauen heute einen tollen Familienfilm an.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 19,
+    "title": "Schloss Freudenberg",
+    "description": "Wir fahren nach Wiesbaden ins Schloss Freudenberg. Ein Erfahrungsfeld der Sinne, wo man anfassen, riechen und experimentieren kann!",
+    "destination": "Schloss Freudenberg, Wiesbaden",
+    "destination_query": "Schloss Freudenberg Wiesbaden"
+  },
+  {
+    "id": 20,
+    "title": "Pizza-Bäcker",
+    "description": "Heute wird selbst geknetet! Wir backen unsere eigene Pizza und jeder darf seinen Teil selbst belegen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 21,
+    "title": "Steckeschlääferklamm",
+    "description": "Wir fahren mit dem Zug nach Bingen und wandern durch die Klamm. Wer findet die meisten geschnitzten Waldgeister in den Bäumen?",
+    "destination": "Steckeschlääferklamm, Bingen am Rhein",
+    "destination_query": "Steckeschlääferklamm Bingen"
+  },
+  {
+    "id": 22,
+    "title": "LEGO Bau-Wettbewerb",
+    "description": "Alle Lego-Steine auf den Boden! Wir bauen gemeinsam eine riesige Stadt oder das höchste Haus.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 23,
+    "title": "Schwarzlicht Minigolf",
+    "description": "Wir spielen eine Runde Minigolf, aber im Dunkeln! Die coolen 3D-Brillen machen es noch spannender.",
+    "destination": "Schwarzlichthelden Minigolf, Mainz",
+    "destination_query": "Schwarzlichthelden Minigolf Mainz"
+  },
+  {
+    "id": 24,
+    "title": "Mal- und Bastelstunde",
+    "description": "Farben raus! Wir malen heute tolle Bilder, basteln etwas Schönes für unser Zimmer oder machen Knetfiguren.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 25,
+    "title": "Planschen im Taubertsbergbad",
+    "description": "Badesachen packen! Wir gehen ins Schwimmbad nach Mainz und rutschen um die Wette.",
+    "destination": "Taubertsbergbad, Mainz",
+    "destination_query": "Taubertsbergbad Mainz"
+  },
+  {
+    "id": 26,
+    "title": "Schatzsuche in der Wohnung",
+    "description": "Ein geheimer Schatz ist versteckt! Wir folgen den Hinweisen durch die ganze Wohnung, bis wir ihn finden.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 27,
+    "title": "Gutenberg-Museum",
+    "description": "Wir schauen uns an, wie früher Bücher gedruckt wurden. Vielleicht dürfen wir sogar selbst etwas drucken!",
+    "destination": "Gutenberg-Museum, Mainz",
+    "destination_query": "Gutenberg-Museum Mainz"
+  },
+  {
+    "id": 28,
+    "title": "Verkleidungsparty",
+    "description": "Alle Kostüme aus dem Schrank! Wir verkleiden uns als Ritter, Prinzessinnen oder Tiere und machen lustige Fotos.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 29,
+    "title": "Mainzstrand",
+    "description": "Sandburgen bauen mitten in der Stadt! Wir setzen uns an den Rhein an den Stadtstrand und spielen im Sand.",
+    "destination": "Mainzstrand, Mainz",
+    "destination_query": "Mainzstrand"
+  },
+  {
+    "id": 30,
+    "title": "Salzteig kneten",
+    "description": "Wir machen Salzteig, formen daraus kleine Tiere oder Anhänger und malen sie bunt an.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 31,
+    "title": "Kaiserpfalz in Ingelheim",
+    "description": "Wir fahren mit der Bahn nach Ingelheim und schauen uns an, wo früher die Kaiser gelebt haben.",
+    "destination": "Kaiserpfalz, Ingelheim am Rhein",
+    "destination_query": "Kaiserpfalz Ingelheim"
+  },
+  {
+    "id": 32,
+    "title": "Hindernis-Parcours im Wohnzimmer",
+    "description": "Über Kissen springen, unter dem Tisch durchkrabbeln: Wer schafft den Heim-Parcours am schnellsten?",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 33,
+    "title": "Waldspaziergang",
+    "description": "Wir fahren in den Lennebergwald, sammeln Stöcke, Zapfen und schauen, welche Tiere wir entdecken.",
+    "destination": "Lennebergwald",
+    "destination_query": "Lennebergwald"
+  },
+  {
+    "id": 34,
+    "title": "Backtag!",
+    "description": "Wir rühren einen leckeren Teig an und backen Muffins oder Plätzchen. Naschen ist erlaubt!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 35,
+    "title": "Botanischer Garten Mainz",
+    "description": "Wir besuchen die riesigen Gewächshäuser und schauen uns exotische Pflanzen aus aller Welt an.",
+    "destination": "Botanischer Garten, Mainz",
+    "destination_query": "Botanischer Garten Mainz"
+  },
+  {
+    "id": 36,
+    "title": "Puzzle-Nachmittag",
+    "description": "Wir holen unsere größten Puzzles raus und setzen sie alle gemeinsam zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 37,
+    "title": "Nerobergbahn fahren",
+    "description": "Wir fahren nach Wiesbaden und steigen in die historische, wasserbetriebene Nerobergbahn ein!",
+    "destination": "Nerobergbahn, Wiesbaden",
+    "destination_query": "Nerobergbahn Wiesbaden"
+  },
+  {
+    "id": 38,
+    "title": "Verstecken im Dunkeln",
+    "description": "Alle Rollläden runter, Lichter aus! Wir schnappen uns Taschenlampen und spielen Verstecken.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 39,
+    "title": "Rhein-Schifffahrt",
+    "description": "Ahoi! Wir steigen in Mainz auf ein Schiff und fahren ein Stück den Rhein hinauf.",
+    "destination": "KD Anleger, Mainz",
+    "destination_query": "KD Anleger Mainz"
+  },
+  {
+    "id": 40,
+    "title": "Eine Geschichte erfinden",
+    "description": "Wir überlegen uns zusammen ein eigenes Märchen und spielen es mit den Kuscheltieren nach.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 41,
+    "title": "Bücherei-Besuch",
+    "description": "Wir fahren in die Stadtbibliothek und suchen uns neue, spannende Vorlesebücher aus.",
+    "destination": "Stadtbibliothek, Mainz",
+    "destination_query": "Stadtbibliothek Mainz"
+  },
+  {
+    "id": 42,
+    "title": "Kuscheltier-Party",
+    "description": "Alle Kuscheltiere sind eingeladen! Wir machen eine große Tee-Party für alle Bären und Puppen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 43,
+    "title": "Frankfurter Zoo",
+    "description": "Mit der S-Bahn zum Frankfurter Zoo. Gorillas, Löwen, Pinguine und vieles mehr warten auf uns!",
+    "destination": "Zoo Frankfurt",
+    "destination_query": "Zoo Frankfurt"
+  },
+  {
+    "id": 44,
+    "title": "Gemeinsames Schaumbad",
+    "description": "Wir machen die Badewanne voll, kippen ordentlich Schaum rein und spielen mit den Badespielzeugen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 45,
+    "title": "Palmengarten Frankfurt",
+    "description": "Ein toller Ausflug ins Grüne: Wir schauen uns riesige Palmen, Kakteen und Schmetterlinge an.",
+    "destination": "Palmengarten, Frankfurt",
+    "destination_query": "Palmengarten Frankfurt"
+  },
+  {
+    "id": 46,
+    "title": "Spielplatz im Stadtpark",
+    "description": "Wir besuchen den großen Spielplatz direkt beim Vogelhaus im Mainzer Stadtpark.",
+    "destination": "Stadtpark, Mainz",
+    "destination_query": "Stadtpark Mainz"
+  },
+  {
+    "id": 47,
+    "title": "Kinderzimmer aufräumen... mit Musik!",
+    "description": "Okay, das muss auch mal sein: Wir machen die lauteste Lieblingsmusik an und zaubern das Zimmer in 10 Minuten wieder ordentlich.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 48,
+    "title": "Eisdisco / Eislaufen",
+    "description": "Wir schnüren die Schlittschuhe und gleiten in der Eishalle um die Kurven.",
+    "destination": "Eishalle, Mainz",
+    "destination_query": "Eishalle Mainz"
+  },
+  {
+    "id": 49,
+    "title": "Straßenbahn-Entdecker",
+    "description": "Wir steigen in eine Straßenbahn, fahren bis zur Endhaltestelle und gucken, was es dort zu entdecken gibt.",
+    "destination": "Mainz Hbf",
+    "destination_query": "Mainz Hbf"
+  },
+  {
+    "id": 50,
+    "title": "Mini-Zeltlager im Zimmer",
+    "description": "Wir bauen ein richtiges kleines Zelt im Zimmer auf und lesen abends mit der Taschenlampe darin.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 51,
+    "title": "Ausflug nach Mannheim",
+    "description": "Mit dem Deutschlandticket geht's nach Mannheim. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Mannheim",
+    "destination_query": "Mannheim"
+  },
+  {
+    "id": 52,
+    "title": "Abenteuer auf dem Abenteuerspielplatz",
+    "description": "Heute wird geklettert und gerutscht auf dem tollen Abenteuerspielplatz.",
+    "destination": "Abenteuerspielplatz, Mainz",
+    "destination_query": "Abenteuerspielplatz Mainz"
+  },
+  {
+    "id": 53,
+    "title": "Spaziergang am Rheinufer",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Rheinufer alles entdecken können.",
+    "destination": "Rheinufer, Mainz",
+    "destination_query": "Rheinufer Mainz"
+  },
+  {
+    "id": 54,
+    "title": "Ausflug nach Bad Kreuznach",
+    "description": "Mit dem Deutschlandticket geht's nach Bad Kreuznach. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Bad Kreuznach",
+    "destination_query": "Bad Kreuznach"
+  },
+  {
+    "id": 55,
+    "title": "Spielenachmittag: Mensch ärgere Dich nicht",
+    "description": "Wir packen Mensch ärgere Dich nicht aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 56,
+    "title": "Basteln: Origami-Tiere",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Origami-Tiere.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 57,
+    "title": "Spielenachmittag: Lego",
+    "description": "Wir packen Lego aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 58,
+    "title": "Spaziergang am Kupferbergterrasse",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Kupferbergterrasse alles entdecken können.",
+    "destination": "Kupferbergterrasse, Mainz",
+    "destination_query": "Kupferbergterrasse Mainz"
+  },
+  {
+    "id": 59,
+    "title": "Kochen: Spaghetti mit Tomatensoße",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen Spaghetti mit Tomatensoße zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 60,
+    "title": "Spaziergang am Lennebergwald",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Lennebergwald alles entdecken können.",
+    "destination": "Lennebergwald, Mainz",
+    "destination_query": "Lennebergwald Mainz"
+  },
+  {
+    "id": 61,
+    "title": "Basteln: eine Schatzkiste",
+    "description": "Wir schnappen uns Schere und Kleber und basteln eine Schatzkiste.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 62,
+    "title": "Abenteuer auf dem Rutschenturm",
+    "description": "Heute wird geklettert und gerutscht auf dem tollen Rutschenturm.",
+    "destination": "Rutschenturm, Mainz",
+    "destination_query": "Rutschenturm Mainz"
+  },
+  {
+    "id": 63,
+    "title": "Kochen: Cupcakes",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen Cupcakes zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 64,
+    "title": "Kochen: Veggie-Burger",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen Veggie-Burger zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 65,
+    "title": "Ausflug nach Worms",
+    "description": "Mit dem Deutschlandticket geht's nach Worms. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Worms",
+    "destination_query": "Worms"
+  },
+  {
+    "id": 66,
+    "title": "Ausflug nach Rüdesheim",
+    "description": "Mit dem Deutschlandticket geht's nach Rüdesheim. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Rüdesheim",
+    "destination_query": "Rüdesheim"
+  },
+  {
+    "id": 67,
+    "title": "Abenteuer auf dem Kletterpark",
+    "description": "Heute wird geklettert und gerutscht auf dem tollen Kletterpark.",
+    "destination": "Kletterpark, Mainz",
+    "destination_query": "Kletterpark Mainz"
+  },
+  {
+    "id": 68,
+    "title": "Spaziergang am Zollhafen",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Zollhafen alles entdecken können.",
+    "destination": "Zollhafen, Mainz",
+    "destination_query": "Zollhafen Mainz"
+  },
+  {
+    "id": 69,
+    "title": "Spaziergang am Stadtpark",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Stadtpark alles entdecken können.",
+    "destination": "Stadtpark, Mainz",
+    "destination_query": "Stadtpark Mainz"
+  },
+  {
+    "id": 70,
+    "title": "Basteln: Tiere aus Eierkartons",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Tiere aus Eierkartons.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 71,
+    "title": "Basteln: Fingerabdruck-Bilder",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Fingerabdruck-Bilder.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 72,
+    "title": "Spaziergang am Gonsenheimer Wald",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Gonsenheimer Wald alles entdecken können.",
+    "destination": "Gonsenheimer Wald, Mainz",
+    "destination_query": "Gonsenheimer Wald Mainz"
+  },
+  {
+    "id": 73,
+    "title": "Abenteuer auf dem Waldspielplatz",
+    "description": "Heute wird geklettert und gerutscht auf dem tollen Waldspielplatz.",
+    "destination": "Waldspielplatz, Mainz",
+    "destination_query": "Waldspielplatz Mainz"
+  },
+  {
+    "id": 74,
+    "title": "Basteln: Traumfänger",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Traumfänger.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 75,
+    "title": "Basteln: Fensterbilder",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Fensterbilder.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 76,
+    "title": "Basteln: Papierflieger",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Papierflieger.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 77,
+    "title": "Spielenachmittag: Lotti Karotti",
+    "description": "Wir packen Lotti Karotti aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 78,
+    "title": "Spielenachmittag: Verstecken",
+    "description": "Wir packen Verstecken aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 79,
+    "title": "Kochen: eine riesige Obstschale",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen eine riesige Obstschale zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 80,
+    "title": "Spaziergang am Volkspark",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Volkspark alles entdecken können.",
+    "destination": "Volkspark, Mainz",
+    "destination_query": "Volkspark Mainz"
+  },
+  {
+    "id": 81,
+    "title": "Ausflug nach Wiesbaden",
+    "description": "Mit dem Deutschlandticket geht's nach Wiesbaden. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Wiesbaden",
+    "destination_query": "Wiesbaden"
+  },
+  {
+    "id": 82,
+    "title": "Spielenachmittag: Stopptanz",
+    "description": "Wir packen Stopptanz aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 83,
+    "title": "Kochen: bunte Gemüsespieße",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen bunte Gemüsespieße zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 84,
+    "title": "Kochen: Pfannkuchen",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen Pfannkuchen zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 85,
+    "title": "Basteln: Klorollen-Raketen",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Klorollen-Raketen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 86,
+    "title": "Ausflug nach Frankfurt",
+    "description": "Mit dem Deutschlandticket geht's nach Frankfurt. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Frankfurt",
+    "destination_query": "Frankfurt"
+  },
+  {
+    "id": 87,
+    "title": "Abenteuer auf dem Piratenspielplatz",
+    "description": "Heute wird geklettert und gerutscht auf dem tollen Piratenspielplatz.",
+    "destination": "Piratenspielplatz, Mainz",
+    "destination_query": "Piratenspielplatz Mainz"
+  },
+  {
+    "id": 88,
+    "title": "Basteln: Windspiele",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Windspiele.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 89,
+    "title": "Spielenachmittag: Memory",
+    "description": "Wir packen Memory aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 90,
+    "title": "Basteln: Salzteig-Figuren",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Salzteig-Figuren.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 91,
+    "title": "Abenteuer auf dem Wasserspielplatz",
+    "description": "Heute wird geklettert und gerutscht auf dem tollen Wasserspielplatz.",
+    "destination": "Wasserspielplatz, Mainz",
+    "destination_query": "Wasserspielplatz Mainz"
+  },
+  {
+    "id": 92,
+    "title": "Abenteuer auf dem Ritterspielplatz",
+    "description": "Heute wird geklettert und gerutscht auf dem tollen Ritterspielplatz.",
+    "destination": "Ritterspielplatz, Mainz",
+    "destination_query": "Ritterspielplatz Mainz"
+  },
+  {
+    "id": 93,
+    "title": "Basteln: eine Ritterburg aus Kartons",
+    "description": "Wir schnappen uns Schere und Kleber und basteln eine Ritterburg aus Kartons.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 94,
+    "title": "Ausflug nach Bingen",
+    "description": "Mit dem Deutschlandticket geht's nach Bingen. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Bingen",
+    "destination_query": "Bingen"
+  },
+  {
+    "id": 95,
+    "title": "Kochen: Milchshakes",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen Milchshakes zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 96,
+    "title": "Spielenachmittag: Duplo",
+    "description": "Wir packen Duplo aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 97,
+    "title": "Kochen: Kartoffelpuffer",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen Kartoffelpuffer zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 98,
+    "title": "Kochen: Waffeln",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen Waffeln zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 99,
+    "title": "Ausflug nach Aschaffenburg",
+    "description": "Mit dem Deutschlandticket geht's nach Aschaffenburg. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Aschaffenburg",
+    "destination_query": "Aschaffenburg"
+  },
+  {
+    "id": 100,
+    "title": "Spielenachmittag: Uno",
+    "description": "Wir packen Uno aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 101,
+    "title": "Spaziergang am Goetheplatz",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Goetheplatz alles entdecken können.",
+    "destination": "Goetheplatz, Mainz",
+    "destination_query": "Goetheplatz Mainz"
+  },
+  {
+    "id": 102,
+    "title": "Ausflug nach Koblenz",
+    "description": "Mit dem Deutschlandticket geht's nach Koblenz. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Koblenz",
+    "destination_query": "Koblenz"
+  },
+  {
+    "id": 103,
+    "title": "Kochen: selbstgemachtes Eis",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen selbstgemachtes Eis zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 104,
+    "title": "Spaziergang am Botanischer Garten",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Botanischer Garten alles entdecken können.",
+    "destination": "Botanischer Garten, Mainz",
+    "destination_query": "Botanischer Garten Mainz"
+  },
+  {
+    "id": 105,
+    "title": "Kochen: Sandwiches",
+    "description": "Heute sind wir Küchenchefs und bereiten zusammen Sandwiches zu. Jeder darf helfen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 106,
+    "title": "Basteln: Masken",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Masken.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 107,
+    "title": "Basteln: Kastanienmännchen",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Kastanienmännchen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 108,
+    "title": "Ausflug nach Darmstadt",
+    "description": "Mit dem Deutschlandticket geht's nach Darmstadt. Wir lassen uns überraschen, was wir dort finden!",
+    "destination": "Darmstadt",
+    "destination_query": "Darmstadt"
+  },
+  {
+    "id": 109,
+    "title": "Spielenachmittag: Obstgarten",
+    "description": "Wir packen Obstgarten aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 110,
+    "title": "Spielenachmittag: Die Reise nach Jerusalem",
+    "description": "Wir packen Die Reise nach Jerusalem aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 111,
+    "title": "Basteln: ein Aquarium im Schuhkarton",
+    "description": "Wir schnappen uns Schere und Kleber und basteln ein Aquarium im Schuhkarton.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 112,
+    "title": "Spaziergang am Winterhafen",
+    "description": "Wir machen einen schönen Spaziergang und schauen, was wir am Winterhafen alles entdecken können.",
+    "destination": "Winterhafen, Mainz",
+    "destination_query": "Winterhafen Mainz"
+  },
+  {
+    "id": 113,
+    "title": "Spielenachmittag: Playmobil",
+    "description": "Wir packen Playmobil aus und machen ein richtig tolles Turnier.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 114,
+    "title": "Basteln: Freundschaftsbänder",
+    "description": "Wir schnappen uns Schere und Kleber und basteln Freundschaftsbänder.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 115,
+    "title": "Sportlich: Fußball",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Fußball.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 116,
+    "title": "Entdecken im Deutsches Filmmuseum",
+    "description": "Wir besuchen das Deutsches Filmmuseum und schauen uns die tollen Ausstellungen an.",
+    "destination": "Deutsches Filmmuseum",
+    "destination_query": "Deutsches Filmmuseum"
+  },
+  {
+    "id": 117,
+    "title": "Entdecken im Liebieghaus Frankfurt",
+    "description": "Wir besuchen das Liebieghaus Frankfurt und schauen uns die tollen Ausstellungen an.",
+    "destination": "Liebieghaus Frankfurt",
+    "destination_query": "Liebieghaus Frankfurt"
+  },
+  {
+    "id": 118,
+    "title": "Sportlich: Verstecken",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Verstecken.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 119,
+    "title": "Entdecken im Kindermuseum Frankfurt",
+    "description": "Wir besuchen das Kindermuseum Frankfurt und schauen uns die tollen Ausstellungen an.",
+    "destination": "Kindermuseum Frankfurt",
+    "destination_query": "Kindermuseum Frankfurt"
+  },
+  {
+    "id": 120,
+    "title": "Sportlich: Fangen",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Fangen.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 121,
+    "title": "Besuch bei Schafe",
+    "description": "Wir fahren los und schauen, ob wir irgendwo Schafe finden können.",
+    "destination": "Tierpark",
+    "destination_query": "Tierpark"
+  },
+  {
+    "id": 122,
+    "title": "Malen: mit Kreide auf der Straße",
+    "description": "Wir packen die Pinsel aus und malen heute mit Kreide auf der Straße.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 123,
+    "title": "Besuch bei Rehe",
+    "description": "Wir fahren los und schauen, ob wir irgendwo Rehe finden können.",
+    "destination": "Tierpark",
+    "destination_query": "Tierpark"
+  },
+  {
+    "id": 124,
+    "title": "Entdecken im Museum Wiesbaden",
+    "description": "Wir besuchen das Museum Wiesbaden und schauen uns die tollen Ausstellungen an.",
+    "destination": "Museum Wiesbaden",
+    "destination_query": "Museum Wiesbaden"
+  },
+  {
+    "id": 125,
+    "title": "Malen: ein riesiges Familien-Wandbild",
+    "description": "Wir packen die Pinsel aus und malen heute ein riesiges Familien-Wandbild.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 126,
+    "title": "Entdecken im Senckenberg Museum Frankfurt",
+    "description": "Wir besuchen das Senckenberg Museum Frankfurt und schauen uns die tollen Ausstellungen an.",
+    "destination": "Senckenberg Museum Frankfurt",
+    "destination_query": "Senckenberg Museum Frankfurt"
+  },
+  {
+    "id": 127,
+    "title": "Sportlich: Tischtennis",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Tischtennis.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 128,
+    "title": "Sportlich: Tanzen",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Tanzen.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 129,
+    "title": "Besuch bei Pferde",
+    "description": "Wir fahren los und schauen, ob wir irgendwo Pferde finden können.",
+    "destination": "Tierpark",
+    "destination_query": "Tierpark"
+  },
+  {
+    "id": 130,
+    "title": "Malen: Fingerfarben-Bilder",
+    "description": "Wir packen die Pinsel aus und malen heute Fingerfarben-Bilder.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 131,
+    "title": "Besuch bei Enten",
+    "description": "Wir fahren los und schauen, ob wir irgendwo Enten finden können.",
+    "destination": "Tierpark",
+    "destination_query": "Tierpark"
+  },
+  {
+    "id": 132,
+    "title": "Besuch bei Hunde",
+    "description": "Wir fahren los und schauen, ob wir irgendwo Hunde finden können.",
+    "destination": "Tierpark",
+    "destination_query": "Tierpark"
+  },
+  {
+    "id": 133,
+    "title": "Malen: unsere Lieblingstiere",
+    "description": "Wir packen die Pinsel aus und malen heute unsere Lieblingstiere.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 134,
+    "title": "Sportlich: Gummitwist",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Gummitwist.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 135,
+    "title": "Besuch bei Ziegen",
+    "description": "Wir fahren los und schauen, ob wir irgendwo Ziegen finden können.",
+    "destination": "Tierpark",
+    "destination_query": "Tierpark"
+  },
+  {
+    "id": 136,
+    "title": "Besuch bei Schwäne",
+    "description": "Wir fahren los und schauen, ob wir irgendwo Schwäne finden können.",
+    "destination": "Tierpark",
+    "destination_query": "Tierpark"
+  },
+  {
+    "id": 137,
+    "title": "Sportlich: Seilspringen",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Seilspringen.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 138,
+    "title": "Malen: Steine bunt an",
+    "description": "Wir packen die Pinsel aus und malen heute Steine bunt an.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 139,
+    "title": "Malen: Ausmalbilder",
+    "description": "Wir packen die Pinsel aus und malen heute Ausmalbilder.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 140,
+    "title": "Besuch bei Eichhörnchen",
+    "description": "Wir fahren los und schauen, ob wir irgendwo Eichhörnchen finden können.",
+    "destination": "Tierpark",
+    "destination_query": "Tierpark"
+  },
+  {
+    "id": 141,
+    "title": "Entdecken im Schifffahrtsmuseum Mainz",
+    "description": "Wir besuchen das Schifffahrtsmuseum Mainz und schauen uns die tollen Ausstellungen an.",
+    "destination": "Schifffahrtsmuseum Mainz",
+    "destination_query": "Schifffahrtsmuseum Mainz"
+  },
+  {
+    "id": 142,
+    "title": "Sportlich: Himmel und Hölle",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Himmel und Hölle.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 143,
+    "title": "Malen: Mandalas",
+    "description": "Wir packen die Pinsel aus und malen heute Mandalas.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 144,
+    "title": "Sportlich: Mini-Olympia",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Mini-Olympia.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 145,
+    "title": "Entdecken im Römisch-Germanisches Zentralmuseum",
+    "description": "Wir besuchen das Römisch-Germanisches Zentralmuseum und schauen uns die tollen Ausstellungen an.",
+    "destination": "Römisch-Germanisches Zentralmuseum",
+    "destination_query": "Römisch-Germanisches Zentralmuseum"
+  },
+  {
+    "id": 146,
+    "title": "Sportlich: Yoga für Kinder",
+    "description": "Heute wird sich bewegt! Wir spielen eine Runde Yoga für Kinder.",
+    "destination": "Zuhause/Draußen",
+    "destination_query": "Sportplatz"
+  },
+  {
+    "id": 147,
+    "title": "Malen: mit Wasserfarben",
+    "description": "Wir packen die Pinsel aus und malen heute mit Wasserfarben.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 148,
+    "title": "Vorlesen: ein spannendes Märchen",
+    "description": "Wir machen es uns gemütlich und lesen ein spannendes Märchen vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 149,
+    "title": "Vorlesen: eine Tiergeschichte",
+    "description": "Wir machen es uns gemütlich und lesen eine Tiergeschichte vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 150,
+    "title": "Vorlesen: Pettersson und Findus",
+    "description": "Wir machen es uns gemütlich und lesen Pettersson und Findus vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 151,
+    "title": "Abendessen: Gemüse-Lasagne",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Gemüse-Lasagne zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 152,
+    "title": "Vorlesen: Die kleine Raupe Nimmersatt",
+    "description": "Wir machen es uns gemütlich und lesen Die kleine Raupe Nimmersatt vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 153,
+    "title": "Abendessen: Veggie-Tacos",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Veggie-Tacos zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 154,
+    "title": "Ausflug: dem Rheinufer in Eltville",
+    "description": "Wir fahren ins Grüne und entdecken die Natur bei dem Rheinufer in Eltville.",
+    "destination": "dem Rheinufer in Eltville",
+    "destination_query": "dem Rheinufer in Eltville"
+  },
+  {
+    "id": 155,
+    "title": "Vorlesen: Gute-Nacht-Geschichten",
+    "description": "Wir machen es uns gemütlich und lesen Gute-Nacht-Geschichten vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 156,
+    "title": "Ausflug: einem See in der Nähe",
+    "description": "Wir fahren ins Grüne und entdecken die Natur bei einem See in der Nähe.",
+    "destination": "einem See in der Nähe",
+    "destination_query": "einem See in der Nähe"
+  },
+  {
+    "id": 157,
+    "title": "Abendessen: Pfannkuchentorte",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Pfannkuchentorte zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 158,
+    "title": "Vorlesen: ein ganz neues Buch aus der Bücherei",
+    "description": "Wir machen es uns gemütlich und lesen ein ganz neues Buch aus der Bücherei vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 159,
+    "title": "Ausflug: einem großen Wald",
+    "description": "Wir fahren ins Grüne und entdecken die Natur bei einem großen Wald.",
+    "destination": "einem großen Wald",
+    "destination_query": "einem großen Wald"
+  },
+  {
+    "id": 160,
+    "title": "Abendessen: Käsenudeln",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Käsenudeln zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 161,
+    "title": "Abendessen: Pommes mit Veggie-Würstchen",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Pommes mit Veggie-Würstchen zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 162,
+    "title": "Ausflug: dem Taunus",
+    "description": "Wir fahren ins Grüne und entdecken die Natur bei dem Taunus.",
+    "destination": "dem Taunus",
+    "destination_query": "dem Taunus"
+  },
+  {
+    "id": 163,
+    "title": "Ausflug: einem Bauernhof",
+    "description": "Wir fahren ins Grüne und entdecken die Natur bei einem Bauernhof.",
+    "destination": "einem Bauernhof",
+    "destination_query": "einem Bauernhof"
+  },
+  {
+    "id": 164,
+    "title": "Abendessen: Nudeln mit Pesto",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Nudeln mit Pesto zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 165,
+    "title": "Ausflug: den Rheinauen",
+    "description": "Wir fahren ins Grüne und entdecken die Natur bei den Rheinauen.",
+    "destination": "den Rheinauen",
+    "destination_query": "den Rheinauen"
+  },
+  {
+    "id": 166,
+    "title": "Ausflug: dem Odenwald",
+    "description": "Wir fahren ins Grüne und entdecken die Natur bei dem Odenwald.",
+    "destination": "dem Odenwald",
+    "destination_query": "dem Odenwald"
+  },
+  {
+    "id": 167,
+    "title": "Vorlesen: ein Wimmelbuch",
+    "description": "Wir machen es uns gemütlich und lesen ein Wimmelbuch vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 168,
+    "title": "Vorlesen: Grüffelo",
+    "description": "Wir machen es uns gemütlich und lesen Grüffelo vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 169,
+    "title": "Abendessen: bunte Gemüse-Wraps",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen bunte Gemüse-Wraps zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 170,
+    "title": "Abendessen: Veggie Hot Dogs",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Veggie Hot Dogs zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 171,
+    "title": "Ausflug: den Weinbergen",
+    "description": "Wir fahren ins Grüne und entdecken die Natur bei den Weinbergen.",
+    "destination": "den Weinbergen",
+    "destination_query": "den Weinbergen"
+  },
+  {
+    "id": 172,
+    "title": "Abendessen: Raclette",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Raclette zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 173,
+    "title": "Vorlesen: Räuber Hotzenplotz",
+    "description": "Wir machen es uns gemütlich und lesen Räuber Hotzenplotz vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 174,
+    "title": "Abendessen: Pizza",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Pizza zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 175,
+    "title": "Abendessen: eine bunte Gemüsepfanne",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen eine bunte Gemüsepfanne zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 176,
+    "title": "Vorlesen: Pippi Langstrumpf",
+    "description": "Wir machen es uns gemütlich und lesen Pippi Langstrumpf vor.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 177,
+    "title": "Abendessen: Veggie-Burger vom Grill",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen Veggie-Burger vom Grill zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 178,
+    "title": "Abendessen: vegetarische Nuggets",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen vegetarische Nuggets zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 179,
+    "title": "Abendessen: vegetarisches Sushi (selbstgemacht!)",
+    "description": "Heute gibt es etwas Besonderes: Wir kochen vegetarisches Sushi (selbstgemacht!) zusammen.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  }
+]

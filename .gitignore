@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables & Secrets
+.env
+client_secret.json
+
+# App Data State (Keep activities, but ignore user-specific state/tokens)
+data/token.json
+data/config.json
+
+# Temporary / Scratch Scripts
+generate_more.py
+make_veg.py
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
