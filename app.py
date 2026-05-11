@@ -10,6 +10,7 @@ import msal
 from functools import wraps
 from dotenv import load_dotenv
 from werkzeug.middleware.proxy_fix import ProxyFix
+from flask import send_from_directory
 
 load_dotenv()
 
@@ -101,6 +102,10 @@ def save_config(config):
 def get_activities():
     with open(ACTIVITIES_FILE, 'r') as f:
         return json.load(f)
+
+@app.route('/sw.js')
+def serve_sw():
+    return send_from_directory('static', 'sw.js', mimetype='application/javascript')
 
 @app.route('/')
 @login_required
