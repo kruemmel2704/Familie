@@ -137,7 +137,8 @@
     "title": "Pizza-Bäcker",
     "description": "Heute wird selbst geknetet! Wir backen unsere eigene Pizza und jeder darf seinen Teil selbst belegen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rezepte/1151011221381450/Der-beste-Pizzateig.html"
   },
   {
     "id": 21,
@@ -207,7 +208,8 @@
     "title": "Salzteig kneten",
     "description": "Wir machen Salzteig, formen daraus kleine Tiere oder Anhänger und malen sie bunt an.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rezepte/4306321715612427/Das-Beste-aus-dem-Garten-Rote-Bete-Honig-Ziegenkaese-Rucola-Walnuss.html"
   },
   {
     "id": 31,
@@ -235,7 +237,8 @@
     "title": "Backtag!",
     "description": "Wir rühren einen leckeren Teig an und backen Muffins oder Plätzchen. Naschen ist erlaubt!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Muffins/Rezepte.html"
   },
   {
     "id": 35,
@@ -410,7 +413,8 @@
     "title": "Kochen: Spaghetti mit Tomatensoße",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen Spaghetti mit Tomatensoße zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Spaghetti%20mit%20Tomatenso%C3%9Fe/Rezepte.html"
   },
   {
     "id": 60,
@@ -438,14 +442,16 @@
     "title": "Kochen: Cupcakes",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen Cupcakes zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Cupcakes/Rezepte.html"
   },
   {
     "id": 64,
     "title": "Kochen: Veggie-Burger",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen Veggie-Burger zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Veggie-Burger/Rezepte.html"
   },
   {
     "id": 65,
@@ -550,7 +556,8 @@
     "title": "Kochen: eine riesige Obstschale",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen eine riesige Obstschale zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/eine%20riesige%20Obstschale/Rezepte.html"
   },
   {
     "id": 80,
@@ -578,14 +585,16 @@
     "title": "Kochen: bunte Gemüsespieße",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen bunte Gemüsespieße zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/bunte%20Gem%C3%BCsespie%C3%9Fe/Rezepte.html"
   },
   {
     "id": 84,
     "title": "Kochen: Pfannkuchen",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen Pfannkuchen zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Pfannkuchen/Rezepte.html"
   },
   {
     "id": 85,
@@ -627,7 +636,8 @@
     "title": "Basteln: Salzteig-Figuren",
     "description": "Wir schnappen uns Schere und Kleber und basteln Salzteig-Figuren.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Basteln%3A%20Salzteig-Figuren/Rezepte.html"
   },
   {
     "id": 91,
@@ -662,7 +672,8 @@
     "title": "Kochen: Milchshakes",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen Milchshakes zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Milchshakes/Rezepte.html"
   },
   {
     "id": 96,
@@ -676,14 +687,16 @@
     "title": "Kochen: Kartoffelpuffer",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen Kartoffelpuffer zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Kartoffelpuffer/Rezepte.html"
   },
   {
     "id": 98,
     "title": "Kochen: Waffeln",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen Waffeln zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Waffeln/Rezepte.html"
   },
   {
     "id": 99,
@@ -718,7 +731,8 @@
     "title": "Kochen: selbstgemachtes Eis",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen selbstgemachtes Eis zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/selbstgemachtes%20Eis/Rezepte.html"
   },
   {
     "id": 104,
@@ -732,7 +746,8 @@
     "title": "Kochen: Sandwiches",
     "description": "Heute sind wir Küchenchefs und bereiten zusammen Sandwiches zu. Jeder darf helfen!",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Sandwiches/Rezepte.html"
   },
   {
     "id": 106,
@@ -1054,7 +1069,8 @@
     "title": "Abendessen: Gemüse-Lasagne",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Gemüse-Lasagne zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Gem%C3%BCse-Lasagne/Rezepte.html"
   },
   {
     "id": 152,
@@ -1068,7 +1084,8 @@
     "title": "Abendessen: Veggie-Tacos",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Veggie-Tacos zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Veggie-Tacos/Rezepte.html"
   },
   {
     "id": 154,
@@ -1096,7 +1113,8 @@
     "title": "Abendessen: Pfannkuchentorte",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Pfannkuchentorte zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Pfannkuchentorte/Rezepte.html"
   },
   {
     "id": 158,
@@ -1117,14 +1135,16 @@
     "title": "Abendessen: Käsenudeln",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Käsenudeln zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/K%C3%A4senudeln/Rezepte.html"
   },
   {
     "id": 161,
     "title": "Abendessen: Pommes mit Veggie-Würstchen",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Pommes mit Veggie-Würstchen zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Pommes%20mit%20Veggie-W%C3%BCrstchen/Rezepte.html"
   },
   {
     "id": 162,
@@ -1145,7 +1165,8 @@
     "title": "Abendessen: Nudeln mit Pesto",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Nudeln mit Pesto zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Nudeln%20mit%20Pesto/Rezepte.html"
   },
   {
     "id": 165,
@@ -1180,14 +1201,16 @@
     "title": "Abendessen: bunte Gemüse-Wraps",
     "description": "Heute gibt es etwas Besonderes: Wir kochen bunte Gemüse-Wraps zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/bunte%20Gem%C3%BCse-Wraps/Rezepte.html"
   },
   {
     "id": 170,
     "title": "Abendessen: Veggie Hot Dogs",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Veggie Hot Dogs zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Veggie%20Hot%20Dogs/Rezepte.html"
   },
   {
     "id": 171,
@@ -1201,7 +1224,8 @@
     "title": "Abendessen: Raclette",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Raclette zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Raclette/Rezepte.html"
   },
   {
     "id": 173,
@@ -1215,14 +1239,16 @@
     "title": "Abendessen: Pizza",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Pizza zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Pizza/Rezepte.html"
   },
   {
     "id": 175,
     "title": "Abendessen: eine bunte Gemüsepfanne",
     "description": "Heute gibt es etwas Besonderes: Wir kochen eine bunte Gemüsepfanne zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/eine%20bunte%20Gem%C3%BCsepfanne/Rezepte.html"
   },
   {
     "id": 176,
@@ -1236,20 +1262,23 @@
     "title": "Abendessen: Veggie-Burger vom Grill",
     "description": "Heute gibt es etwas Besonderes: Wir kochen Veggie-Burger vom Grill zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/Veggie-Burger%20vom%20Grill/Rezepte.html"
   },
   {
     "id": 178,
     "title": "Abendessen: vegetarische Nuggets",
     "description": "Heute gibt es etwas Besonderes: Wir kochen vegetarische Nuggets zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/vegetarische%20Nuggets/Rezepte.html"
   },
   {
     "id": 179,
     "title": "Abendessen: vegetarisches Sushi (selbstgemacht!)",
     "description": "Heute gibt es etwas Besonderes: Wir kochen vegetarisches Sushi (selbstgemacht!) zusammen.",
     "destination": "Zuhause",
-    "destination_query": "Zuhause"
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rs/s0/vegetarisches%20Sushi%20%28selbstgemacht%29/Rezepte.html"
   }
 ]
