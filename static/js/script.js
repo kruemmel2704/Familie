@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleEl = document.getElementById('activity-title');
     const descEl = document.getElementById('activity-description');
     const btnMaps = document.getElementById('btn-maps');
+    const btnRecipe = document.getElementById('btn-recipe');
     const btnCalendar = document.getElementById('btn-calendar');
     const btnReset = document.getElementById('btn-reset');
     const cbAlone = document.getElementById('hailey-lars-alone');
@@ -63,7 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 eventDatetime.value = getNextHourDatetimeLocal();
             }
             
-            btnMaps.style.display = 'inline-flex';
+            if (currentActivity && currentActivity.recipe_url) {
+                if (btnRecipe) {
+                    btnRecipe.href = currentActivity.recipe_url;
+                    btnRecipe.style.display = 'inline-flex';
+                }
+                btnMaps.style.display = 'none';
+            } else {
+                if (btnRecipe) btnRecipe.style.display = 'none';
+                btnMaps.style.display = 'inline-flex';
+            }
+            
             btnCalendar.style.display = 'inline-flex';
             btnReset.style.display = 'inline-flex';
         }, 600); // Matches the animation duration
@@ -86,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         btnMaps.style.display = 'none';
+        if (btnRecipe) btnRecipe.style.display = 'none';
         btnCalendar.style.display = 'none';
         btnReset.style.display = 'none';
         statusMsg.textContent = '';
