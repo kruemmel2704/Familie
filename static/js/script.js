@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isRevealed = false;
     let currentActivity = null;
+    let currentActivities = window.PRELOADED_ACTIVITIES || [];
 
     if (!boxesWrapper) return; // Not on the index page
 
@@ -32,18 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function fetchActivity() {
-        fetch('/get_activity')
+        fetch('/get_activities_batch')
             .then(res => res.json())
             .then(data => {
-                currentActivity = data;
-                titleEl.textContent = data.title;
-                descEl.textContent = data.description;
+                currentActivities = data;
             });
     }
 
     function revealBox(clickedBox) {
         if (isRevealed) return;
+        if (!currentActivities || currentActivities.length < 3) return;
         isRevealed = true;
+        
+        const boxIndex = parseInt(clickedBox.getAttribute('data-box')) - 1;
+        currentActivity = currentActivities[boxIndex];
+        
+        titleEl.textContent = currentActivity.title;
+        descEl.textContent = currentActivity.description;
 
         // Hide other boxes
         mysteryBoxes.forEach(box => {
@@ -234,5 +240,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize
     resizeCanvas();
-    fetchActivity();
+    // fetchActivity(); // Not needed on first load, we use PRELOADED_ACTIVITIES
 });

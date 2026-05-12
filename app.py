@@ -112,13 +112,22 @@ def serve_sw():
 def index():
     maps_api_key = os.environ.get("MAPS_API_KEY", "")
     show_mothers_day = session.pop('show_mothers_day', False)
-    return render_template('index.html', maps_api_key=maps_api_key, show_mothers_day=show_mothers_day)
+    activities = get_activities()
+    preloaded_activities = random.sample(activities, min(3, len(activities)))
+    return render_template('index.html', maps_api_key=maps_api_key, show_mothers_day=show_mothers_day, preloaded_activities=preloaded_activities)
 
 @app.route('/get_activity')
 @login_required
 def get_random_activity():
     activities = get_activities()
     selected = random.choice(activities)
+    return jsonify(selected)
+
+@app.route('/get_activities_batch')
+@login_required
+def get_activities_batch():
+    activities = get_activities()
+    selected = random.sample(activities, min(3, len(activities)))
     return jsonify(selected)
 
 @app.route('/admin')

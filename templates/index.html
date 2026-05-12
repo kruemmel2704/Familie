@@ -96,8 +96,11 @@
 {% endblock %}
 
 {% block scripts %}
+<script>
+    window.PRELOADED_ACTIVITIES = {{ preloaded_activities | tojson | safe }};
+</script>
 {% if maps_api_key and maps_api_key != 'FÜGE_HIER_DEINEN_MAPS_API_KEY_EIN' %}
 <script src="https://maps.googleapis.com/maps/api/js?key={{ maps_api_key }}&libraries=places"></script>
 {% endif %}
-<script src="{{ url_for('static', filename='js/script.js') }}?v=2"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}?v=3"></script>
 {% endblock %}
