@@ -1280,5 +1280,112 @@
     "destination": "Zuhause",
     "destination_query": "Zuhause",
     "recipe_url": "https://www.chefkoch.de/rs/s0/vegetarisches%20Sushi%20%28selbstgemacht%29/Rezepte.html"
+  },
+  {
+    "id": 200,
+    "title": "Ausflug in die Kisselmühle",
+    "description": "Wir begleiten heute Alpalas auf dem Alpaka-Trekking in der Kisselmühle.",
+    "destination": "Untere Kisselmühle 1, 65346 Eltville",
+    "destination_query": "Untere Kisselmühle 1, 65346 Eltville"
+  },
+  {
+    "id": 223,
+    "activity_type": "kreativ",
+    "title": "Zaubertranklabor im Wohnzimmer",
+    "description": "Wir öffnen unser eigenes Zaubertranklabor! Mit Wasser, Essig, Backpulver, Lebensmittelfarben und viel Fantasie mixen wir sprudelnde, zischende und leuchtende Tränke. Welche magischen Effekte könnt ihr entdecken? Lasst eurer Kreativität freien Lauf!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.alles-fuer-selbermacher.de/wissen/gesundheit-ernaehrung/kindern-gesund-kochen-lernen/experimente-fuer-kinder/zaubertrank-experiment"
+  },
+  {
+    "id": 224,
+    "activity_type": "draussen",
+    "title": "Kleine Entdecker im Naturschutzgebiet",
+    "description": "Ein aufregender Ausflug ins nahegelegene Naturschutzgebiet! Mit Lupen bewaffnet erkunden wir die Natur, suchen nach kleinen Tierchen, sammeln interessante Steine und Pflanzen und lernen spielerisch etwas über unsere Umwelt. Wer entdeckt die tollsten Schätze der Natur?",
+    "destination": "Naturschutzgebiet",
+    "destination_query": "Naturschutzgebiet in der Nähe"
+  },
+  {
+    "id": 225,
+    "activity_type": "kochen",
+    "title": "Bunte Obstspieße und Dips",
+    "description": "Wir werden zu Obstkünstlern! Mit verschiedenen bunten Obstsorten basteln wir kreative Obstspieße in Form von Gesichtern oder Tieren. Dazu rühren wir leckere Jogurt-Dips mit Honig und Vanille an. Ein toller Spaß für Groß und Klein!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.chefkoch.de/rezepte/324341146914949/Obst-Spiesse-mit-Dip.html"
+  },
+  {
+    "id": 226,
+    "activity_type": "kreativ",
+    "title": "Upcycling-Werkstatt: Aus alt mach neu!",
+    "description": "Heute wird recycelt! Wir verwandeln alte Materialien in neue Kunstwerke. Aus Pappkartons bauen wir ein eigenes Raumschiff, aus leeren Dosen bunte Stiftehalter und aus Plastikflaschen lustige Tierfiguren. Kreativität kennt keine Grenzen!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 227,
+    "activity_type": "abenteuer",
+    "title": "Schatzsuche im Garten oder Park",
+    "description": "Eine spannende Schatzsuche wartet auf uns! Mit einer geheimnisvollen Schatzkarte machen wir uns auf die Suche nach versteckten Schätzen. Unterwegs müssen wir knifflige Rätsel lösen und verschiedene Aufgaben meistern, um dem Schatz immer näher zu kommen. Wer findet ihn zuerst?",
+    "destination": "Garten oder Park",
+    "destination_query": "Garten oder Park in der Nähe"
+  },
+  {
+    "id": 228,
+    "activity_type": "unterhaltung",
+    "title": "Puppentheater-Tag: Bühne frei!",
+    "description": "Heute werden wir zu Theaterdirektoren! Wir basteln unsere eigenen Handpuppen aus Socken, Papiertüten und allerlei Bastelmaterialien. Mit unseren selbstgebastelten Figuren führen wir dann spannende Theaterstücke auf und entführen unser Publikum in fantasievolle Welten.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.familie.de/basteln/basteltipp-handpuppen-aus-socken-basteln-einfach-ausprobieren-7416328.html"
+  },
+  {
+    "id": 229,
+    "activity_type": "draussen",
+    "title": "Fahrrad-Tour zur kleinen Bäckerei",
+    "description": "Ein sportlicher Ausflug mit leckerem Ziel! Wir packen unsere Fahrräder und machen eine entspannte Tour zur nächsten kleinen Bäckerei. Dort gönnen wir uns ein Stück Kuchen oder ein Eis als Belohnung für unsere sportliche Leistung. Die Fahrt bergauf stärkt die Waden, die Abfahrt macht Spaß!",
+    "destination": "Bäckerei",
+    "destination_query": "Bäckerei in der Nähe"
+  },
+  {
+    "id": 230,
+    "activity_type": "experimente",
+    "title": "Wissenschafts-Labor: Experimente für kleine Forscher",
+    "description": "Heute tauchen wir in die Welt der Wissenschaft ein! Mit einfachen Haushaltsmitteln führen wir spannende Experimente durch. Wir bauen einen Vulkan, lassen eine Zitronenbatterie Strom erzeugen und erforschen, was schwimmt und was sinkt. Spannende Entdeckungen garantiert!",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause",
+    "recipe_url": "https://www.GEOlino.de/experimente/1558925.html"
+  },
+  {
+    "id": 231,
+    "activity_type": "kreativ",
+    "title": "Familien-Foto-Challenge",
+    "description": "Lasst uns zu Foto-Profis werden! Wir erstellen eine lustige Foto-Challenge mit verschiedenen Aufgaben. Wer kann das kreativste Selfies machen? Wer findet die coolsten Muster in der Natur? Wer kann die witzigste Pose nachmachen? Zum Schluss präsentieren wir stolz unsere Ergebnisse.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 232,
+    "activity_type": "draussen",
+    "title": "Picknick im Park mit Bewegungsspielen",
+    "description": "Wir packen einen Picknickkorb und suchen uns ein schönes Plätzchen im Park. Nach leckeren Snacks stärken wir uns für lustige Bewegungsspiele. Ob Fußball, Federball oder ein wildes Fangspiel – hier kommt jeder auf seine Kosten!",
+    "destination": "Park",
+    "destination_query": "Park in der Nähe"
+  },
+  {
+    "id": 233,
+    "activity_type": "unterhaltung",
+    "title": "Familien-Quiz-Show",
+    "description": "Heute Abend sind wir die Stars unserer eigenen Quiz-Show! Mit lustigen Fragen zu unserer Familie, spannenden Allgemeinwissens-Rätseln und kniffligen Denkaufgaben kämpfen wir um den begehrten Wanderpokal. Wer wird heutiger Champion?",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
+  },
+  {
+    "id": 234,
+    "activity_type": "kreativ",
+    "title": "Knetfiguren-Werkstatt",
+    "description": "Ein kreativer Nachmittag mit Knete! Jeder schnappt sich seine Lieblingsfarbe und wir kreieren die wildesten Figuren. Von lustigen Monstern über süße Tiere bis hin zu fantastischen Fabelwesen – der Fantasie sind keine Grenzen gesetzt.",
+    "destination": "Zuhause",
+    "destination_query": "Zuhause"
   }
 ]
