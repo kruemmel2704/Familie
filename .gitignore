@@ -28,3 +28,10 @@ make_veg.py
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# .NET Build Artifacts
+**/bin/
+**/obj/
+*.user
+*.suo
+.vs/

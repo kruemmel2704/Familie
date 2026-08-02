@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: familien-abenteuer-backend
+    ports:
+      - "5295:8080"
+    volumes:
+      - ./data:/app/data
+      - ./client_secret.json:/app/client_secret.json:ro
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: familien-abenteuer-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: always
