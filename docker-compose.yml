@@ -11,6 +11,8 @@ services:
     volumes:
       - ./data:/app/data
       - ./client_secret.json:/app/client_secret.json:ro
+    env_file:
+      - .env
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
     restart: always
@@ -22,6 +24,8 @@ services:
     container_name: familien-abenteuer-frontend
     ports:
       - "5173:80"
+    env_file:
+      - .env
     depends_on:
       - backend
     restart: always
