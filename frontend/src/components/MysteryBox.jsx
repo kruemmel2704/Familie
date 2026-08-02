@@ -79,26 +79,41 @@ export default function MysteryBox({ apiBaseUrl, showMothersDay, onCloseMothersD
           const lng = position.coords.longitude;
           let url;
           if (isApple) {
-            url = `http://maps.apple.com/?saddr=${lat},${lng}&daddr=${encodeURIComponent(dest)}&dirflg=r`;
+            url = `maps://?saddr=${lat},${lng}&daddr=${encodeURIComponent(dest)}&dirflg=r`;
           } else {
             url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${encodeURIComponent(dest)}&travelmode=transit`;
           }
-          window.open(url, '_blank');
+          const isMobile = isApple || /Android/i.test(navigator.userAgent);
+          if (isMobile) {
+            window.location.href = url;
+          } else {
+            window.open(url, '_blank');
+          }
           setIsLoadingRoute(false);
         },
         () => {
           const url = isApple 
-            ? `http://maps.apple.com/?q=${encodeURIComponent(dest)}`
+            ? `maps://?q=${encodeURIComponent(dest)}`
             : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dest)}`;
-          window.open(url, '_blank');
+          const isMobile = isApple || /Android/i.test(navigator.userAgent);
+          if (isMobile) {
+            window.location.href = url;
+          } else {
+            window.open(url, '_blank');
+          }
           setIsLoadingRoute(false);
         }
       );
     } else {
       const url = isApple 
-        ? `http://maps.apple.com/?q=${encodeURIComponent(dest)}`
+        ? `maps://?q=${encodeURIComponent(dest)}`
         : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dest)}`;
-      window.open(url, '_blank');
+      const isMobile = isApple || /Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = url;
+      } else {
+        window.open(url, '_blank');
+      }
       setIsLoadingRoute(false);
     }
   };
