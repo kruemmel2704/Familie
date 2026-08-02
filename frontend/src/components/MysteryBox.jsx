@@ -69,24 +69,35 @@ export default function MysteryBox({ apiBaseUrl, showMothersDay, onCloseMothersD
     setIsLoadingRoute(true);
 
     const dest = selectedActivity.destinationQuery || selectedActivity.destination;
+    const isApple = /iPad|iPhone|iPod|Macintosh/i.test(navigator.userAgent) || 
+                    (navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /Macintosh/.test(navigator.userAgent));
     
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const lat = position.coords.latitude;
           const lng = position.coords.longitude;
-          const url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${encodeURIComponent(dest)}&travelmode=transit`;
+          let url;
+          if (isApple) {
+            url = `http://maps.apple.com/?saddr=${lat},${lng}&daddr=${encodeURIComponent(dest)}&dirflg=r`;
+          } else {
+            url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${encodeURIComponent(dest)}&travelmode=transit`;
+          }
           window.open(url, '_blank');
           setIsLoadingRoute(false);
         },
         () => {
-          const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dest)}`;
+          const url = isApple 
+            ? `http://maps.apple.com/?q=${encodeURIComponent(dest)}`
+            : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dest)}`;
           window.open(url, '_blank');
           setIsLoadingRoute(false);
         }
       );
     } else {
-      const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dest)}`;
+      const url = isApple 
+        ? `http://maps.apple.com/?q=${encodeURIComponent(dest)}`
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dest)}`;
       window.open(url, '_blank');
       setIsLoadingRoute(false);
     }
