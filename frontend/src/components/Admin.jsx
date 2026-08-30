@@ -4,7 +4,9 @@ export default function Admin({ apiBaseUrl }) {
   const [config, setConfig] = useState({ calendarId: '' });
   const [calendars, setCalendars] = useState([]);
   const [googleStatus, setGoogleStatus] = useState({ clientSecretExists: false });
+  const [aiStatus, setAiStatus] = useState({ geminiKeyExists: false, aiCacheExists: false, aiActivitiesCount: 0 });
   const [isLoading, setIsLoading] = useState(false);
+  const [isRefreshingAi, setIsRefreshingAi] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
   const [isCallbackProcessing, setIsCallbackProcessing] = useState(false);
 
@@ -21,6 +23,11 @@ export default function Admin({ apiBaseUrl }) {
       .then(res => res.json())
       .then(data => setGoogleStatus(data))
       .catch(err => console.error("Error loading status:", err));
+
+    fetch(`${apiBaseUrl}/api/ai/status`)
+      .then(res => res.json())
+      .then(data => setAiStatus(data))
+      .catch(err => console.error("Error loading AI status:", err));
 
     fetch(`${apiBaseUrl}/api/calendar/list`)
       .then(res => {
@@ -106,6 +113,29 @@ export default function Admin({ apiBaseUrl }) {
       });
   };
 
+  const handleRefreshAi = (e) => {
+    e.preventDefault();
+    setIsRefreshingAi(true);
+    setStatusMessage('Google AI Agent sucht neue Aktivitäten...');
+    fetch(`${apiBaseUrl}/api/ai/refresh`, {
+      method: 'POST'
+    })
+      .then(res => res.json())
+      .then(data => {
+        setIsRefreshingAi(false);
+        if (data.success) {
+          setStatusMessage(data.message || `Google AI Agent: ${data.count} neue ÖPNV-Aktivitäten generiert!`);
+          loadData();
+        } else {
+          setStatusMessage('Fehler bei der KI-Generierung: ' + data.error);
+        }
+      })
+      .catch(err => {
+        setIsRefreshingAi(false);
+        setStatusMessage('Fehler bei der KI-Generierung.');
+      });
+  };
+
   return (
     <div className="admin-container">
       <h1><i className="fa-solid fa-gear"></i> Admin-Bereich</h1>
@@ -185,6 +215,32 @@ export default function Admin({ apiBaseUrl }) {
               </form>
             </div>
           )}
+
+          <div className="card mt-20">
+            <h2><i className="fa-solid fa-robot"></i> Google AI Agent (Mainz & ÖPNV)</h2>
+            <p>Der Google AI Agent sucht automatisch nach abwechslungsreichen Freizeitangeboten in Mainz und Umgebung, die perfekt mit öffentlichen Verkehrsmitteln (ÖPNV) erreichbar sind.</p>
+
+            <div style={{ margin: '15px 0' }}>
+              <p><strong>API-Status:</strong>{' '}
+                {aiStatus.geminiKeyExists ? (
+                  <span style={{ color: '#2ec4b6', fontWeight: 'bold' }}><i className="fa-solid fa-circle-check"></i> Gemini API Schlüssel aktiv</span>
+                ) : (
+                  <span style={{ color: '#e71d36', fontWeight: 'bold' }}><i className="fa-solid fa-circle-xmark"></i> API-Schlüssel fehlt</span>
+                )}
+              </p>
+              <p><strong>Verfügbare Aktivitäten:</strong> {aiStatus.aiActivitiesCount} Angebote</p>
+            </div>
+
+            <form onSubmit={handleRefreshAi}>
+              <button type="submit" className="btn btn-primary" disabled={isRefreshingAi || isLoading}>
+                {isRefreshingAi ? (
+                  <><i className="fa-solid fa-spinner fa-spin"></i> Generiere Aktivitäten...</>
+                ) : (
+                  <><i className="fa-solid fa-wand-magic-sparkles"></i> Neue Aktivitäten mit Google AI suchen</>
+                )}
+              </button>
+            </form>
+          </div>
         </>
       )}
     </div>

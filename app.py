@@ -11,6 +11,7 @@ from functools import wraps
 from dotenv import load_dotenv
 from werkzeug.middleware.proxy_fix import ProxyFix
 from flask import send_from_directory
+from ai_agent import GoogleActivityAgent
 
 load_dotenv()
 
@@ -27,7 +28,11 @@ CONFIG_FILE = os.path.join(DATA_DIR, 'config.json')
 CLIENT_SECRETS_FILE = os.path.join(os.path.dirname(__file__), 'client_secret.json')
 TOKEN_FILE = os.path.join(DATA_DIR, 'token.json')
 
+# Initialize Google AI Agent
+ai_agent = GoogleActivityAgent(DATA_DIR)
+
 SCOPES = ['https://www.googleapis.com/auth/calendar.events', 'https://www.googleapis.com/auth/calendar.readonly']
+
 
 # MSAL Configuration
 MS_CLIENT_ID = os.environ.get("MS_CLIENT_ID")
@@ -100,8 +105,7 @@ def save_config(config):
         json.dump(config, f, indent=4)
 
 def get_activities():
-    with open(ACTIVITIES_FILE, 'r') as f:
-        return json.load(f)
+    return ai_agent.get_activities()
 
 @app.route('/sw.js')
 def serve_sw():
@@ -119,8 +123,7 @@ def index():
 @app.route('/get_activity')
 @login_required
 def get_random_activity():
-    activities = get_activities()
-    selected = random.choice(activities)
+    selected = ai_agent.get_random_activity()
     return jsonify(selected)
 
 @app.route('/get_activities_batch')
@@ -129,6 +132,16 @@ def get_activities_batch():
     activities = get_activities()
     selected = random.sample(activities, min(3, len(activities)))
     return jsonify(selected)
+
+@app.route('/search_activity', methods=['POST'])
+@login_required
+def search_activity():
+    data = request.json or {}
+    idea = data.get('idea', '').strip()
+    if not idea:
+        return jsonify({"error": "Bitte gib deine Idee ein."}), 400
+    activity = ai_agent.search_activity_by_idea(idea)
+    return jsonify(activity)
 
 @app.route('/admin')
 @login_required
@@ -152,8 +165,30 @@ def admin():
             flash(f"Fehler beim Abrufen der Kalender: {e}")
     
     client_secret_exists = os.path.exists(CLIENT_SECRETS_FILE)
+    ai_cache_exists = os.path.exists(ai_agent.ai_cache_file)
+    ai_activities_count = len(get_activities())
+    gemini_key_exists = bool(ai_agent.api_key)
     
-    return render_template('admin.html', calendars=calendars, config=config, client_secret_exists=client_secret_exists)
+    return render_template(
+        'admin.html', 
+        calendars=calendars, 
+        config=config, 
+        client_secret_exists=client_secret_exists,
+        ai_cache_exists=ai_cache_exists,
+        ai_activities_count=ai_activities_count,
+        gemini_key_exists=gemini_key_exists
+    )
+
+@app.route('/admin/refresh_ai_activities', methods=['POST'])
+@login_required
+def refresh_ai_activities():
+    try:
+        fresh = ai_agent.fetch_fresh_activities(count=20)
+        flash(f"Google AI Agent: {len(fresh)} neue ÖPNV-Aktivitäten für Mainz & Umgebung erfolgreich generiert!")
+    except Exception as e:
+        flash(f"Fehler bei der KI-Generierung: {e}")
+    return redirect(url_for('admin'))
+
 
 @app.route('/authorize')
 @login_required

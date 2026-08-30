@@ -29,7 +29,28 @@
         </div>
     </div>
 
+    <!-- Custom Idea Button -->
+    <div style="margin-top: 25px; text-align: center;" id="idea-button-container">
+        <button class="btn btn-secondary" id="btn-idea-prompt" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe); color: white; border: none; border-radius: 12px; padding: 12px 24px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3); font-size: 1rem;">
+            <i class="fa-solid fa-lightbulb"></i> Ich habe eine Idee aber weiß nicht wo
+        </button>
+    </div>
+
+    <!-- Idea Input Modal -->
+    <div id="idea-modal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); justify-content: center; align-items: center;">
+        <div class="modal-content" style="background: white; border-radius: 20px; padding: 30px; width: 90%; max-width: 480px; text-align: center; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.3); animation: slideUpFade 0.4s;">
+            <span id="close-idea-modal" style="position: absolute; right: 18px; top: 15px; font-size: 26px; cursor: pointer; color: #888;">&times;</span>
+            <h2 style="color: #6c5ce7; margin-bottom: 12px; font-size: 1.6rem;"><i class="fa-solid fa-wand-magic-sparkles"></i> Was möchtet ihr machen?</h2>
+            <p style="color: #555; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">Beschreibe eure Idee (z.B. <em>"Dinosaurier sehen"</em>, <em>"Wasserspielplatz"</em>, <em>"Klettern im Wald"</em>, <em>"Tiere füttern"</em>). Der Google AI Agent sucht das beste Ausflugsziel mit ÖPNV!</p>
+            <input type="text" id="idea-input" placeholder="z.B. Tiere füttern und Klettern" style="width: 100%; padding: 12px 15px; border-radius: 12px; border: 2px solid #a29bfe; font-size: 1rem; margin-bottom: 20px; box-sizing: border-box; outline: none;">
+            <button class="btn btn-primary" id="btn-submit-idea" style="width: 100%; font-size: 1.05rem; padding: 12px; border-radius: 12px;">
+                <i class="fa-solid fa-compass"></i> Passende Aktivität finden
+            </button>
+        </div>
+    </div>
+
     <!-- The Revealed Content (Hidden initially) -->
+
     <div class="revealed-content" id="revealed-content" style="display: none;">
         <div class="prize-badge"><i class="fa-solid fa-trophy"></i> GEWINN!</div>
         <h2 id="activity-title">Lade...</h2>

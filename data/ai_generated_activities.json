@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "Abenteuer im Volkspark Mainz",
+    "description": "Ein riesiges Spielparadies für Kinder jeden Alters mit tollem Wasserspielplatz, Minigolfanlage und einer historischen Parkbahn. Hier können Familien wunderbar picknicken und den ganzen Tag an der frischen Luft verbringen.",
+    "destination": "Volkspark, Mainz",
+    "destination_query": "Volkspark Mainz"
+  },
+  {
+    "id": 2,
+    "title": "Naturhistorisches Museum Mainz",
+    "description": "Spannende Entdeckungsreise durch die Erdgeschichte mit echten Fossilienschätzen, prachtvollen Mineralien und präparierten Tieren. Interaktive Stationen laden kleine Forscher zum Mitmachen und Staunen ein.",
+    "destination": "Naturhistorisches Museum, Mainz",
+    "destination_query": "Naturhistorisches Museum Mainz"
+  },
+  {
+    "id": 3,
+    "title": "Tiere hautnah im Wildpark Mainz-Gonsenheim",
+    "description": "Ein idyllischer Tierpark im Gonsenheimer Wald mit Hirschgehegen, Wildschweinen und Ziegen. Nach dem Füttern der Tiere lädt der angrenzende Waldspielplatz zum Austoben ein.",
+    "destination": "Wildpark Gonsenheim, Mainz",
+    "destination_query": "Wildpark Gonsenheim Mainz"
+  },
+  {
+    "id": 4,
+    "title": "Natur- und Tierpark Fasanerie Wiesbaden",
+    "description": "Wölfe, Bären und Wildkatzen in naturnaher Umgebung hautnah erleben. Der Park bietet zudem wunderschöne Spazierwege, einen großen Wasserspielplatz und einen Streichelzoo.",
+    "destination": "Tier- und Pflanzenpark Fasanerie, Wiesbaden",
+    "destination_query": "Fasanerie Wiesbaden"
+  },
+  {
+    "id": 5,
+    "title": "Fahrt mit der historischen Nerobergbahn Wiesbaden",
+    "description": "Ein echtes Erlebnis: Die mit Wasserkraft betriebene Standseilbahn bringt die Familie sanft auf den Neroberg. Oben warten ein Erlebnismuseum, eine tolle Aussicht und viel Natur.",
+    "destination": "Nerobergbahn Talstation, Wiesbaden",
+    "destination_query": "Nerobergbahn Wiesbaden"
+  },
+  {
+    "id": 6,
+    "title": "Dinosaurier-Invasion im Senckenberg Museum Frankfurt",
+    "description": "Eines der größten Naturkundemuseen Deutschlands begeistert mit riesigen Dinosaurierskeletten, Meteoriten und präparierten Tieren. Ein absolutes Highlight für kleine und große Urzeit-Fans.",
+    "destination": "Senckenberg Naturmuseum, Frankfurt am Main",
+    "destination_query": "Senckenberg Naturmuseum Frankfurt"
+  },
+  {
+    "id": 7,
+    "title": "Mitmach-Fun im EXPERIMINTA ScienceCenter Frankfurt",
+    "description": "An über 130 Experimentierstationen können Kinder Phänomene aus Mathematik, Informatik, Naturwissenschaft und Technik selbst ausprobieren. Anfassen und Mitmachen ist hier ausdrücklich erwünscht!",
+    "destination": "EXPERIMINTA ScienceCenter, Frankfurt am Main",
+    "destination_query": "Experiminta Frankfurt"
+  },
+  {
+    "id": 8,
+    "title": "Tropen-Erkundung im Palmengarten Frankfurt",
+    "description": "Ein riesiger botanischer Garten mit Tropenhäusern, einem großen Bootsweiher und tollen Themenspielplätzen. Kinder können hier die Pflanzenwelt der ganzen Erde erforschen.",
+    "destination": "Palmengarten, Frankfurt am Main",
+    "destination_query": "Palmengarten Frankfurt"
+  },
+  {
+    "id": 9,
+    "title": "Kreativ werden im Jungen Museum Frankfurt",
+    "description": "Ein speziell auf Kinder und Familien ausgerichtetes Museum mit interaktiven Ausstellungen zum Anfassen, Bauen und Experimentieren. Ideal für verregnete Nachmittage.",
+    "destination": "Junges Museum, Frankfurt am Main",
+    "destination_query": "Junges Museum Frankfurt"
+  },
+  {
+    "id": 10,
+    "title": "Tierischer Spaß im Zoo Vivarium Darmstadt",
+    "description": "Ein gemütlicher Familienzoo mit über 2.000 Tieren, darunter Kängurus, Affen und bunten Vögeln. Mit Streichelgehege und Abenteuerspielplätzen perfekt für einen Tagesausflug.",
+    "destination": "Zoo Vivarium, Darmstadt",
+    "destination_query": "Zoo Vivarium Darmstadt"
+  },
+  {
+    "id": 11,
+    "title": "Tobespaß im Park am Mäuseturm Bingen",
+    "description": "Direkt am Rhein gelegener Freizeitpark auf dem ehemaligen Landesgartenschau-Gelände mit riesigen Spielplätzen, Skatepark und Panoramablick auf den Binger Mäuseturm.",
+    "destination": "Park am Mäuseturm, Bingen am Rhein",
+    "destination_query": "Park am Mäuseturm Bingen"
+  },
+  {
+    "id": 12,
+    "title": "Ritter-Spurensuche in der Kaiserpfalz Ingelheim",
+    "description": "Auf den Spuren Karls des Großen die historischen Palastruinen entdecken. Das nahegelegene Museum bietet spannende Einblicke und digitale Entdeckertouren für Kinder.",
+    "destination": "Museum bei der Kaiserpfalz, Ingelheim am Rhein",
+    "destination_query": "Museum bei der Kaiserpfalz Ingelheim"
+  },
+  {
+    "id": 13,
+    "title": "Kinderführung & Kunst im Landesmuseum Mainz",
+    "description": "Spannende Geschichten aus der Römerzeit und dem Mittelalter hautnah entdecken. Das Museum bietet regelmäßig kinderfreundliche Workshops und Familiencoole Entdeckerspuren an.",
+    "destination": "Landesmuseum, Mainz",
+    "destination_query": "Landesmuseum Mainz"
+  },
+  {
+    "id": 14,
+    "title": "Badespaß in der Rhein-Welle Ingelheim/Bingen",
+    "description": "Ein tolles Erlebnisbad mit Wellenbecken, Sportbecken und aufregenden Rutschen. Der Kleinkindbereich und die Außenbecken bieten Wasserspaß für jede Altersgruppe.",
+    "destination": "Regionalbad Rhein-Welle, Ingelheim am Rhein",
+    "destination_query": "Rhein-Welle Ingelheim"
+  },
+  {
+    "id": 15,
+    "title": "Kletterabenteuer im Kletterwald Neroberg Wiesbaden",
+    "description": "Hoch oben in den Baumkronen des Wiesbaden Hausbergs können Kinder und Eltern gesichert Parcours in verschiedenen Schwierigkeitsstufen meistern. Ein echtes Outdoor-Abenteuer!",
+    "destination": "Kletterwald Neroberg, Wiesbaden",
+    "destination_query": "Kletterwald Neroberg Wiesbaden"
+  }
+]

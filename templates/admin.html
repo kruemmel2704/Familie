@@ -49,5 +49,28 @@
         </form>
     </div>
     {% endif %}
+
+    <div class="card mt-20">
+        <h2><i class="fa-solid fa-robot"></i> Google AI Agent (Mainz & ÖPNV)</h2>
+        <p>Der Google AI Agent sucht automatisch nach abwechslungsreichen Freizeitangeboten in Mainz und Umgebung, die perfekt mit öffentlichen Verkehrsmitteln (ÖPNV) erreichbar sind.</p>
+        
+        <div style="margin: 15px 0;">
+            <p><strong>API-Status:</strong> 
+                {% if gemini_key_exists %}
+                    <span style="color: #2ec4b6; font-weight: bold;"><i class="fa-solid fa-circle-check"></i> Gemini API Schlüssel aktiv</span>
+                {% else %}
+                    <span style="color: #e71d36; font-weight: bold;"><i class="fa-solid fa-circle-xmark"></i> API-Schlüssel fehlt</span>
+                {% endif %}
+            </p>
+            <p><strong>Verfügbare Aktivitäten:</strong> {{ ai_activities_count }} Angebote</p>
+        </div>
+
+        <form action="{{ url_for('refresh_ai_activities') }}" method="POST">
+            <button type="submit" class="btn btn-primary">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Neue Aktivitäten mit Google AI suchen
+            </button>
+        </form>
+    </div>
 </div>
 {% endblock %}
+

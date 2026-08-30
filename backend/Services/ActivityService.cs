@@ -11,50 +11,16 @@ namespace Backend.Services;
 
 public class ActivityService
 {
-    private readonly string _activitiesFilePath;
+    private readonly AiAgentService _aiAgentService;
 
-    public ActivityService()
+    public ActivityService(AiAgentService aiAgentService)
     {
-        var dataDir = Path.Combine(Directory.GetCurrentDirectory(), "data");
-        if (!Directory.Exists(dataDir))
-        {
-            // Fallback to parent directory data folder if running in backend folder
-            var parentDir = Directory.GetParent(Directory.GetCurrentDirectory())?.FullName;
-            if (parentDir != null)
-            {
-                dataDir = Path.Combine(parentDir, "data");
-            }
-        }
-        _activitiesFilePath = Path.Combine(dataDir, "activities.json");
+        _aiAgentService = aiAgentService;
     }
 
     public async Task<List<Activity>> GetActivitiesAsync()
     {
-        if (!File.Exists(_activitiesFilePath))
-        {
-            return new List<Activity>();
-        }
-
-        var json = await File.ReadAllTextAsync(_activitiesFilePath);
-        var options = new JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true,
-            NumberHandling = JsonNumberHandling.AllowReadingFromString | JsonNumberHandling.WriteAsString
-        };
-        
-        // Custom mapping to handle title, description, destination, destination_query, recipe_url
-        var rawActivities = JsonSerializer.Deserialize<List<RawActivity>>(json, options);
-        if (rawActivities == null) return new List<Activity>();
-
-        return rawActivities.Select(r => new Activity
-        {
-            Id = r.Id,
-            Title = r.Title ?? "",
-            Description = r.Description ?? "",
-            Destination = r.Destination ?? "",
-            DestinationQuery = r.DestinationQuery ?? "",
-            RecipeUrl = r.RecipeUrl
-        }).ToList();
+        return await _aiAgentService.GetActivitiesAsync();
     }
 
     public async Task<Activity?> GetRandomActivityAsync()
@@ -72,19 +38,5 @@ public class ActivityService
         
         var random = new Random();
         return activities.OrderBy(x => random.Next()).Take(Math.Min(count, activities.Count)).ToList();
-    }
-
-    private class RawActivity
-    {
-        public int Id { get; set; }
-        public string? Title { get; set; }
-        public string? Description { get; set; }
-        public string? Destination { get; set; }
-        
-        [JsonPropertyName("destination_query")]
-        public string? DestinationQuery { get; set; }
-
-        [JsonPropertyName("recipe_url")]
-        public string? RecipeUrl { get; set; }
     }
 }

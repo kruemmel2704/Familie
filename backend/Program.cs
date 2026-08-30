@@ -10,6 +10,8 @@ using System.Collections.Generic;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpClient<AiAgentService>();
+builder.Services.AddSingleton<AiAgentService>();
 builder.Services.AddSingleton<ActivityService>();
 builder.Services.AddSingleton<GoogleCalendarService>();
 builder.Services.AddSingleton<ConfigService>();
@@ -41,6 +43,36 @@ app.MapGet("/api/activities/batch", async (ActivityService activityService) =>
 {
     var batch = await activityService.GetRandomActivitiesBatchAsync();
     return Results.Ok(batch);
+});
+
+app.MapPost("/api/activities/search", async (SearchIdeaRequest req, AiAgentService aiService) =>
+{
+    if (string.IsNullOrWhiteSpace(req.Idea))
+    {
+        return Results.BadRequest(new { error = "Bitte gib deine Idee ein." });
+    }
+    var activity = await aiService.SearchActivityByIdeaAsync(req.Idea);
+    return Results.Ok(activity);
+});
+
+// AI Agent Endpoints
+app.MapGet("/api/ai/status", async (AiAgentService aiService) =>
+{
+    var status = await aiService.GetStatusAsync();
+    return Results.Ok(status);
+});
+
+app.MapPost("/api/ai/refresh", async (AiAgentService aiService) =>
+{
+    try
+    {
+        var fresh = await aiService.FetchFreshActivitiesAsync(20);
+        return Results.Ok(new { success = true, count = fresh.Count, message = $"Google AI Agent: {fresh.Count} neue ÖPNV-Aktivitäten erfolgreich generiert!" });
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest(new { success = false, error = ex.Message });
+    }
 });
 
 // Config API
@@ -140,4 +172,6 @@ public record CreateEventRequest(
     string EventDatetime, 
     bool HaileyLarsAlone
 );
+
+public record SearchIdeaRequest(string Idea);
 

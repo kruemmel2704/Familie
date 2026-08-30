@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             boxesWrapper.style.display = 'none';
+            const ideaBtnContainer = document.getElementById('idea-button-container');
+            if (ideaBtnContainer) ideaBtnContainer.style.display = 'none';
             revealedContent.style.display = 'flex';
             
             if (datePickerContainer) {
@@ -90,12 +92,108 @@ document.addEventListener('DOMContentLoaded', () => {
         box.addEventListener('click', () => revealBox(box));
     });
 
+    // Custom Idea Modal Logic
+    const btnIdeaPrompt = document.getElementById('btn-idea-prompt');
+    const ideaModal = document.getElementById('idea-modal');
+    const closeIdeaModal = document.getElementById('close-idea-modal');
+    const ideaInput = document.getElementById('idea-input');
+    const btnSubmitIdea = document.getElementById('btn-submit-idea');
+    const ideaBtnContainer = document.getElementById('idea-button-container');
+
+    if (btnIdeaPrompt && ideaModal) {
+        btnIdeaPrompt.addEventListener('click', () => {
+            ideaModal.style.display = 'flex';
+            if (ideaInput) ideaInput.focus();
+        });
+
+        if (closeIdeaModal) {
+            closeIdeaModal.addEventListener('click', () => {
+                ideaModal.style.display = 'none';
+            });
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === ideaModal) {
+                ideaModal.style.display = 'none';
+            }
+        });
+
+        function submitCustomIdea() {
+            const val = ideaInput ? ideaInput.value.trim() : '';
+            if (!val) {
+                alert("Bitte gib eine Idee ein.");
+                return;
+            }
+
+            btnSubmitIdea.disabled = true;
+            btnSubmitIdea.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> KI sucht Ziel...';
+
+            fetch('/search_activity', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ idea: val })
+            })
+            .then(res => res.json())
+            .then(data => {
+                btnSubmitIdea.disabled = false;
+                btnSubmitIdea.innerHTML = '<i class="fa-solid fa-compass"></i> Passende Aktivität finden';
+                ideaModal.style.display = 'none';
+                if (ideaInput) ideaInput.value = '';
+
+                currentActivity = data;
+                titleEl.textContent = data.title;
+                descEl.textContent = data.description;
+
+                isRevealed = true;
+                boxesWrapper.style.display = 'none';
+                if (ideaBtnContainer) ideaBtnContainer.style.display = 'none';
+
+                revealedContent.style.display = 'flex';
+
+                if (datePickerContainer) {
+                    datePickerContainer.style.display = 'block';
+                    eventDatetime.value = getNextHourDatetimeLocal();
+                }
+
+                if (currentActivity && currentActivity.recipe_url) {
+                    if (btnRecipe) {
+                        btnRecipe.href = currentActivity.recipe_url;
+                        btnRecipe.style.display = 'inline-flex';
+                    }
+                    btnMaps.style.display = 'none';
+                } else {
+                    if (btnRecipe) btnRecipe.style.display = 'none';
+                    btnMaps.style.display = 'inline-flex';
+                }
+
+                btnCalendar.style.display = 'inline-flex';
+                btnReset.style.display = 'inline-flex';
+            })
+            .catch(err => {
+                alert("Fehler bei der KI-Suche: " + err);
+                btnSubmitIdea.disabled = false;
+                btnSubmitIdea.innerHTML = '<i class="fa-solid fa-compass"></i> Passende Aktivität finden';
+            });
+        }
+
+        if (btnSubmitIdea) {
+            btnSubmitIdea.addEventListener('click', submitCustomIdea);
+        }
+        if (ideaInput) {
+            ideaInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') submitCustomIdea();
+            });
+        }
+    }
+
     // Reset button
     btnReset.addEventListener('click', () => {
         isRevealed = false;
         
         boxesWrapper.style.display = 'flex';
+        if (ideaBtnContainer) ideaBtnContainer.style.display = 'block';
         revealedContent.style.display = 'none';
+
         
         mysteryBoxes.forEach(box => {
             box.classList.remove('hidden');

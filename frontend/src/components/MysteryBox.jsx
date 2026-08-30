@@ -16,6 +16,11 @@ export default function MysteryBox({ apiBaseUrl, showMothersDay, onCloseMothersD
   const [directions, setDirections] = useState(null);
   const [isLoadingRoute, setIsLoadingRoute] = useState(false);
 
+  // Idea Modal State
+  const [showIdeaModal, setShowIdeaModal] = useState(false);
+  const [ideaInput, setIdeaInput] = useState('');
+  const [isSearchingIdea, setIsSearchingIdea] = useState(false);
+
   // Initialize event datetime to next hour
   const getNextHourDatetimeLocal = () => {
     const date = new Date();
@@ -61,7 +66,39 @@ export default function MysteryBox({ apiBaseUrl, showMothersDay, onCloseMothersD
     setSelectedActivity(null);
     setCalendarStatus({ text: '', type: '' });
     setDirections(null);
+    setShowIdeaModal(false);
+    setIdeaInput('');
     fetchBatch();
+  };
+
+  const handleSubmitCustomIdea = (e) => {
+    if (e) e.preventDefault();
+    const val = ideaInput.trim();
+    if (!val) {
+      alert("Bitte gib eine Idee ein.");
+      return;
+    }
+
+    setIsSearchingIdea(true);
+
+    fetch(`${apiBaseUrl}/api/activities/search`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ idea: val })
+    })
+      .then(res => res.json())
+      .then(data => {
+        setIsSearchingIdea(false);
+        setShowIdeaModal(false);
+        setIdeaInput('');
+
+        setSelectedActivity(data);
+        setIsRevealed(true);
+      })
+      .catch(err => {
+        alert("Fehler bei der KI-Suche: " + err);
+        setIsSearchingIdea(false);
+      });
   };
 
   const handleMapsRedirect = () => {
@@ -194,6 +231,70 @@ export default function MysteryBox({ apiBaseUrl, showMothersDay, onCloseMothersD
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* Custom Idea Button */}
+      {!isRevealed && (
+        <div style={{ marginTop: '25px', textAlign: 'center' }}>
+          <button 
+            className="btn btn-secondary" 
+            onClick={() => setShowIdeaModal(true)}
+            style={{
+              background: 'linear-gradient(135deg, #6c5ce7, #a29bfe)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '12px',
+              padding: '12px 24px',
+              fontWeight: '600',
+              cursor: 'pointer',
+              boxShadow: '0 4px 15px rgba(108, 92, 231, 0.3)',
+              fontSize: '1rem'
+            }}
+          >
+            <i className="fa-solid fa-lightbulb"></i> Ich habe eine Idee aber weiß nicht wo
+          </button>
+        </div>
+      )}
+
+      {/* Idea Input Modal */}
+      {showIdeaModal && (
+        <div className="modal" style={{ display: 'flex', position: 'fixed', zIndex: 1000, left: 0, top: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'center', alignItems: 'center' }}>
+          <div className="modal-content" style={{ background: 'white', borderRadius: '20px', padding: '30px', width: '90%', maxWidth: '480px', textAlign: 'center', position: 'relative', boxShadow: '0 15px 35px rgba(0,0,0,0.3)' }}>
+            <span 
+              onClick={() => setShowIdeaModal(false)}
+              style={{ position: 'absolute', right: '18px', top: '15px', fontSize: '26px', cursor: 'pointer', color: '#888' }}
+            >
+              &times;
+            </span>
+            <h2 style={{ color: '#6c5ce7', marginBottom: '12px', fontSize: '1.6rem' }}>
+              <i className="fa-solid fa-wand-magic-sparkles"></i> Was möchtet ihr machen?
+            </h2>
+            <p style={{ color: '#555', fontSize: '0.95rem', marginBottom: '20px', lineHeight: '1.5' }}>
+              Beschreibe eure Idee (z.B. <em>"Dinosaurier sehen"</em>, <em>"Wasserspielplatz"</em>, <em>"Klettern im Wald"</em>, <em>"Tiere füttern"</em>). Der Google AI Agent sucht das beste Ausflugsziel mit ÖPNV!
+            </p>
+            <form onSubmit={handleSubmitCustomIdea}>
+              <input 
+                type="text" 
+                placeholder="z.B. Tiere füttern und Klettern" 
+                value={ideaInput}
+                onChange={(e) => setIdeaInput(e.target.value)}
+                style={{ width: '100%', padding: '12px 15px', borderRadius: '12px', border: '2px solid #a29bfe', fontSize: '1rem', marginBottom: '20px', boxSizing: 'border-box', outline: 'none' }}
+              />
+              <button 
+                type="submit" 
+                className="btn btn-primary" 
+                disabled={isSearchingIdea}
+                style={{ width: '100%', fontSize: '1.05rem', padding: '12px', borderRadius: '12px' }}
+              >
+                {isSearchingIdea ? (
+                  <><i className="fa-solid fa-spinner fa-spin"></i> KI sucht Ziel...</>
+                ) : (
+                  <><i className="fa-solid fa-compass"></i> Passende Aktivität finden</>
+                )}
+              </button>
+            </form>
+          </div>
         </div>
       )}
 
