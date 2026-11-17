@@ -2,6 +2,9 @@ version: '3.8'
 
 services:
   backend:
+    # Image aus GHCR (wird von Watchtower automatisch aktualisiert).
+    # Fuer lokale Entwicklung baut `docker compose build` weiterhin aus ./backend.
+    image: ghcr.io/kruemmel2704/familie-backend:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -15,9 +18,12 @@ services:
       - .env
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
     restart: always
 
   frontend:
+    image: ghcr.io/kruemmel2704/familie-frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -31,4 +37,23 @@ services:
       - .env
     depends_on:
       - backend
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    restart: always
+
+  # Autoupdater: prueft regelmaessig die Registry und aktualisiert die
+  # gelabelten Container, sobald ein neues :latest-Image vorliegt.
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: familien-abenteuer-watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Login-Daten fuer die (private) GHCR-Registry, damit Watchtower pullen kann.
+      # Auf dem Server einmalig `docker login ghcr.io` ausfuehren – legt diese Datei an.
+      - ${HOME}/.docker/config.json:/config.json:ro
+    environment:
+      - WATCHTOWER_CLEANUP=true          # alte Images nach Update entfernen
+      - WATCHTOWER_LABEL_ENABLE=true     # nur gelabelte Container ueberwachen
+      - WATCHTOWER_POLL_INTERVAL=120     # alle 120 Sekunden nach Updates sehen
+      - TZ=Europe/Berlin
     restart: always

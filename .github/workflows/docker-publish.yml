@@ -1,0 +1,60 @@
+name: Build and Publish Docker Images
+
+# Baut bei jedem Push auf main die Backend- und Frontend-Images und
+# veroeffentlicht sie in der GitHub Container Registry (GHCR).
+# Watchtower auf dem Server erkennt die neuen :latest-Images und
+# aktualisiert die laufenden Container automatisch.
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    strategy:
+      matrix:
+        include:
+          - name: backend
+            context: ./backend
+          - name: frontend
+            context: ./frontend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Owner in Kleinbuchstaben (GHCR verlangt lowercase)
+        id: vars
+        run: echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+
+      - name: Build and push ${{ matrix.name }}
+        uses: docker/build-push-action@v6
+        with:
+          context: ${{ matrix.context }}
+          push: true
+          tags: |
+            ghcr.io/${{ steps.vars.outputs.owner }}/familie-${{ matrix.name }}:latest
+            ghcr.io/${{ steps.vars.outputs.owner }}/familie-${{ matrix.name }}:${{ github.sha }}
+          # Nur das Frontend wertet diese Build-Args aus; das Backend ignoriert sie.
+          # Es sind oeffentliche IDs (kein Geheimnis) – als GitHub Secrets hinterlegen.
+          build-args: |
+            VITE_MS_CLIENT_ID=${{ secrets.MS_CLIENT_ID }}
+            VITE_MS_TENANT_ID=${{ secrets.MS_TENANT_ID }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
