@@ -27,6 +27,8 @@ class GoogleActivityAgent:
         self.ai_cache_file = os.path.join(self.data_dir, 'ai_generated_activities.json')
         self.fallback_file = os.path.join(self.data_dir, 'activities.json')
         self.api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+        # Modell über Umgebungsvariable anpassbar; Default ist ein stabiles, verfügbares Modell.
+        self.model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
     def _get_client(self):
         if not self.api_key:
@@ -77,7 +79,7 @@ Beispiel-Struktur:
                 response_mime_type="application/json"
             )
             res = client.models.generate_content(
-                model='gemini-3.6-flash',
+                model=self.model,
                 contents=prompt,
                 config=config
             )
@@ -208,7 +210,7 @@ Beispiel-Struktur:
                 response_mime_type="application/json"
             )
             res = client.models.generate_content(
-                model='gemini-3.6-flash',
+                model=self.model,
                 contents=prompt,
                 config=config
             )

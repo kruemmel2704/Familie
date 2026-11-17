@@ -16,6 +16,9 @@ builder.Services.AddSingleton<ActivityService>();
 builder.Services.AddSingleton<GoogleCalendarService>();
 builder.Services.AddSingleton<ConfigService>();
 
+// Aktualisiert die KI-Aktivitäten-Datenbank automatisch einmal pro Woche.
+builder.Services.AddHostedService<WeeklyRefreshService>();
+
 // Enable CORS for React Frontend (typically port 5173 or 3000)
 builder.Services.AddCors(options =>
 {

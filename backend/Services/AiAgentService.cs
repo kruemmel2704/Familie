@@ -43,8 +43,23 @@ public class AiAgentService
 
     public string? GetApiKey()
     {
-        return Environment.GetEnvironmentVariable("GEMINI_API_KEY") 
+        return Environment.GetEnvironmentVariable("GEMINI_API_KEY")
                ?? Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
+    }
+
+    // Das zu verwendende Gemini-Modell. Über die Umgebungsvariable GEMINI_MODEL
+    // anpassbar, damit der Name ohne Code-Änderung aktualisiert werden kann.
+    // Default ist ein stabiles, allgemein verfügbares Modell.
+    private static string GetModel()
+    {
+        var model = Environment.GetEnvironmentVariable("GEMINI_MODEL");
+        return string.IsNullOrWhiteSpace(model) ? "gemini-2.5-flash" : model.Trim();
+    }
+
+    // Zeitpunkt der letzten erfolgreichen DB-Aktualisierung (Dateistempel des Caches).
+    public DateTime? GetLastRefreshUtc()
+    {
+        return File.Exists(_aiCacheFile) ? File.GetLastWriteTimeUtc(_aiCacheFile) : (DateTime?)null;
     }
 
     public async Task<List<Activity>> GetActivitiesAsync()
@@ -179,7 +194,7 @@ Beispiel-Struktur:
 
         try
         {
-            var textResult = await CallGeminiApiAsync(prompt, apiKey);
+            var textResult = await CallGeminiApiAsync(prompt, apiKey, temperature: 1.0);
             if (!string.IsNullOrWhiteSpace(textResult))
             {
                 var options = new JsonSerializerOptions
@@ -245,14 +260,16 @@ Beispiel-Struktur:
         return new AiStatusResponse(
             GeminiKeyExists: !string.IsNullOrEmpty(apiKey),
             AiCacheExists: cacheExists,
-            AiActivitiesCount: activities.Count
+            AiActivitiesCount: activities.Count,
+            Model: GetModel(),
+            LastRefreshUtc: GetLastRefreshUtc()
         );
     }
 
-    private async Task<string?> CallGeminiApiAsync(string prompt, string apiKey)
+    private async Task<string?> CallGeminiApiAsync(string prompt, string apiKey, double temperature = 0.9)
     {
-        var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key={apiKey}";
-        
+        var url = $"https://generativelanguage.googleapis.com/v1beta/models/{GetModel()}:generateContent?key={apiKey}";
+
         var payload = new
         {
             contents = new[]
@@ -267,7 +284,10 @@ Beispiel-Struktur:
             },
             generationConfig = new
             {
-                responseMimeType = "application/json"
+                responseMimeType = "application/json",
+                // Höhere Temperatur sorgt für abwechslungsreiche, zum Prompt passende
+                // Vorschläge statt immer derselben Antwort.
+                temperature = temperature
             }
         };
 
@@ -402,5 +422,7 @@ Beispiel-Struktur:
 public record AiStatusResponse(
     bool GeminiKeyExists,
     bool AiCacheExists,
-    int AiActivitiesCount
+    int AiActivitiesCount,
+    string Model,
+    DateTime? LastRefreshUtc
 );
